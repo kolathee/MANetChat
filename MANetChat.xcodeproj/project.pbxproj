@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A428D98D1E0BD6C000A8ADCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */; };
+		A428D98F1E0BD6C000A8ADCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D98E1E0BD6C000A8ADCC /* ViewController.swift */; };
+		A428D9921E0BD6C000A8ADCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428D9901E0BD6C000A8ADCC /* Main.storyboard */; };
+		A428D9951E0BD6C000A8ADCC /* MANetChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */; };
+		A428D9971E0BD6C000A8ADCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A428D9961E0BD6C000A8ADCC /* Assets.xcassets */; };
+		A428D99A1E0BD6C000A8ADCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */; };
+		A428D9A51E0BD6C000A8ADCC /* MANetChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9A41E0BD6C000A8ADCC /* MANetChatTests.swift */; };
+		A428D9B01E0BD6C000A8ADCC /* MANetChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9AF1E0BD6C000A8ADCC /* MANetChatUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A428D9A11E0BD6C000A8ADCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A428D9811E0BD6C000A8ADCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A428D9881E0BD6C000A8ADCC;
+			remoteInfo = MANetChat;
+		};
+		A428D9AC1E0BD6C000A8ADCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A428D9811E0BD6C000A8ADCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A428D9881E0BD6C000A8ADCC;
+			remoteInfo = MANetChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A428D9891E0BD6C000A8ADCC /* MANetChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANetChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A428D98E1E0BD6C000A8ADCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A428D9911E0BD6C000A8ADCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A428D9941E0BD6C000A8ADCC /* MANetChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MANetChat.xcdatamodel; sourceTree = "<group>"; };
+		A428D9961E0BD6C000A8ADCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A428D9991E0BD6C000A8ADCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A428D99B1E0BD6C000A8ADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A428D9A01E0BD6C000A8ADCC /* MANetChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MANetChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A428D9A41E0BD6C000A8ADCC /* MANetChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANetChatTests.swift; sourceTree = "<group>"; };
+		A428D9A61E0BD6C000A8ADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A428D9AB1E0BD6C000A8ADCC /* MANetChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MANetChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A428D9AF1E0BD6C000A8ADCC /* MANetChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANetChatUITests.swift; sourceTree = "<group>"; };
+		A428D9B11E0BD6C000A8ADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A428D9861E0BD6C000A8ADCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A428D99D1E0BD6C000A8ADCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A428D9A81E0BD6C000A8ADCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A428D9801E0BD6C000A8ADCC = {
+			isa = PBXGroup;
+			children = (
+				A428D98B1E0BD6C000A8ADCC /* MANetChat */,
+				A428D9A31E0BD6C000A8ADCC /* MANetChatTests */,
+				A428D9AE1E0BD6C000A8ADCC /* MANetChatUITests */,
+				A428D98A1E0BD6C000A8ADCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A428D98A1E0BD6C000A8ADCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A428D9891E0BD6C000A8ADCC /* MANetChat.app */,
+				A428D9A01E0BD6C000A8ADCC /* MANetChatTests.xctest */,
+				A428D9AB1E0BD6C000A8ADCC /* MANetChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A428D98B1E0BD6C000A8ADCC /* MANetChat */ = {
+			isa = PBXGroup;
+			children = (
+				A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */,
+				A428D98E1E0BD6C000A8ADCC /* ViewController.swift */,
+				A428D9901E0BD6C000A8ADCC /* Main.storyboard */,
+				A428D9961E0BD6C000A8ADCC /* Assets.xcassets */,
+				A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */,
+				A428D99B1E0BD6C000A8ADCC /* Info.plist */,
+				A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */,
+			);
+			path = MANetChat;
+			sourceTree = "<group>";
+		};
+		A428D9A31E0BD6C000A8ADCC /* MANetChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				A428D9A41E0BD6C000A8ADCC /* MANetChatTests.swift */,
+				A428D9A61E0BD6C000A8ADCC /* Info.plist */,
+			);
+			path = MANetChatTests;
+			sourceTree = "<group>";
+		};
+		A428D9AE1E0BD6C000A8ADCC /* MANetChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A428D9AF1E0BD6C000A8ADCC /* MANetChatUITests.swift */,
+				A428D9B11E0BD6C000A8ADCC /* Info.plist */,
+			);
+			path = MANetChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A428D9881E0BD6C000A8ADCC /* MANetChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A428D9B41E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChat" */;
+			buildPhases = (
+				A428D9851E0BD6C000A8ADCC /* Sources */,
+				A428D9861E0BD6C000A8ADCC /* Frameworks */,
+				A428D9871E0BD6C000A8ADCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MANetChat;
+			productName = MANetChat;
+			productReference = A428D9891E0BD6C000A8ADCC /* MANetChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A428D99F1E0BD6C000A8ADCC /* MANetChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A428D9B71E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatTests" */;
+			buildPhases = (
+				A428D99C1E0BD6C000A8ADCC /* Sources */,
+				A428D99D1E0BD6C000A8ADCC /* Frameworks */,
+				A428D99E1E0BD6C000A8ADCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A428D9A21E0BD6C000A8ADCC /* PBXTargetDependency */,
+			);
+			name = MANetChatTests;
+			productName = MANetChatTests;
+			productReference = A428D9A01E0BD6C000A8ADCC /* MANetChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A428D9AA1E0BD6C000A8ADCC /* MANetChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A428D9BA1E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatUITests" */;
+			buildPhases = (
+				A428D9A71E0BD6C000A8ADCC /* Sources */,
+				A428D9A81E0BD6C000A8ADCC /* Frameworks */,
+				A428D9A91E0BD6C000A8ADCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A428D9AD1E0BD6C000A8ADCC /* PBXTargetDependency */,
+			);
+			name = MANetChatUITests;
+			productName = MANetChatUITests;
+			productReference = A428D9AB1E0BD6C000A8ADCC /* MANetChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A428D9811E0BD6C000A8ADCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kolathee Payuhawattana";
+				TargetAttributes = {
+					A428D9881E0BD6C000A8ADCC = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = DZ3FYPCUHX;
+						ProvisioningStyle = Automatic;
+					};
+					A428D99F1E0BD6C000A8ADCC = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = DZ3FYPCUHX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A428D9881E0BD6C000A8ADCC;
+					};
+					A428D9AA1E0BD6C000A8ADCC = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = DZ3FYPCUHX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A428D9881E0BD6C000A8ADCC;
+					};
+				};
+			};
+			buildConfigurationList = A428D9841E0BD6C000A8ADCC /* Build configuration list for PBXProject "MANetChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A428D9801E0BD6C000A8ADCC;
+			productRefGroup = A428D98A1E0BD6C000A8ADCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A428D9881E0BD6C000A8ADCC /* MANetChat */,
+				A428D99F1E0BD6C000A8ADCC /* MANetChatTests */,
+				A428D9AA1E0BD6C000A8ADCC /* MANetChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A428D9871E0BD6C000A8ADCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A428D99A1E0BD6C000A8ADCC /* LaunchScreen.storyboard in Resources */,
+				A428D9971E0BD6C000A8ADCC /* Assets.xcassets in Resources */,
+				A428D9921E0BD6C000A8ADCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A428D99E1E0BD6C000A8ADCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A428D9A91E0BD6C000A8ADCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A428D9851E0BD6C000A8ADCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A428D9951E0BD6C000A8ADCC /* MANetChat.xcdatamodeld in Sources */,
+				A428D98F1E0BD6C000A8ADCC /* ViewController.swift in Sources */,
+				A428D98D1E0BD6C000A8ADCC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A428D99C1E0BD6C000A8ADCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A428D9A51E0BD6C000A8ADCC /* MANetChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A428D9A71E0BD6C000A8ADCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A428D9B01E0BD6C000A8ADCC /* MANetChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A428D9A21E0BD6C000A8ADCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A428D9881E0BD6C000A8ADCC /* MANetChat */;
+			targetProxy = A428D9A11E0BD6C000A8ADCC /* PBXContainerItemProxy */;
+		};
+		A428D9AD1E0BD6C000A8ADCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A428D9881E0BD6C000A8ADCC /* MANetChat */;
+			targetProxy = A428D9AC1E0BD6C000A8ADCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A428D9901E0BD6C000A8ADCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A428D9911E0BD6C000A8ADCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A428D9991E0BD6C000A8ADCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A428D9B21E0BD6C000A8ADCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A428D9B31E0BD6C000A8ADCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A428D9B51E0BD6C000A8ADCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DZ3FYPCUHX;
+				INFOPLIST_FILE = MANetChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A428D9B61E0BD6C000A8ADCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DZ3FYPCUHX;
+				INFOPLIST_FILE = MANetChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A428D9B81E0BD6C000A8ADCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DZ3FYPCUHX;
+				INFOPLIST_FILE = MANetChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MANetChat.app/MANetChat";
+			};
+			name = Debug;
+		};
+		A428D9B91E0BD6C000A8ADCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DZ3FYPCUHX;
+				INFOPLIST_FILE = MANetChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MANetChat.app/MANetChat";
+			};
+			name = Release;
+		};
+		A428D9BB1E0BD6C000A8ADCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DZ3FYPCUHX;
+				INFOPLIST_FILE = MANetChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MANetChat;
+			};
+			name = Debug;
+		};
+		A428D9BC1E0BD6C000A8ADCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DZ3FYPCUHX;
+				INFOPLIST_FILE = MANetChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MANetChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A428D9841E0BD6C000A8ADCC /* Build configuration list for PBXProject "MANetChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A428D9B21E0BD6C000A8ADCC /* Debug */,
+				A428D9B31E0BD6C000A8ADCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A428D9B41E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A428D9B51E0BD6C000A8ADCC /* Debug */,
+				A428D9B61E0BD6C000A8ADCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A428D9B71E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A428D9B81E0BD6C000A8ADCC /* Debug */,
+				A428D9B91E0BD6C000A8ADCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A428D9BA1E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A428D9BB1E0BD6C000A8ADCC /* Debug */,
+				A428D9BC1E0BD6C000A8ADCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A428D9941E0BD6C000A8ADCC /* MANetChat.xcdatamodel */,
+			);
+			currentVersion = A428D9941E0BD6C000A8ADCC /* MANetChat.xcdatamodel */;
+			path = MANetChat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A428D9811E0BD6C000A8ADCC /* Project object */;
+}
