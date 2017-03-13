@@ -1,0 +1,6 @@
+framework module Pods_MANetChat {
+  umbrella header "Pods-MANetChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

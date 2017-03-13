@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53D88976C607D8D7B6757CD6 /* Pods_MANetChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B29F97AC9B9FE440C2D9B4 /* Pods_MANetChatUITests.framework */; };
+		A40E56221E475F6F0015D96E /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E56211E475F6F0015D96E /* MPCManager.swift */; };
+		A40E56241E479F460015D96E /* ShowNearbyUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E56231E479F460015D96E /* ShowNearbyUserVC.swift */; };
+		A40F63BA1E10621900615246 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F63B91E10621900615246 /* MapVC.swift */; };
+		A40F63C71E10B12500615246 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F63C61E10B12500615246 /* PokeAnnotation.swift */; };
+		A40F63CA1E10CB9000615246 /* RadioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F63C91E10CB9000615246 /* RadioVC.swift */; };
+		A40F63CC1E10D20400615246 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40F63CB1E10D20400615246 /* MediaPlayer.framework */; };
+		A414C2721E11DED3006B2BB1 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414C2711E11DED3006B2BB1 /* ChatListVC.swift */; };
 		A428D98D1E0BD6C000A8ADCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */; };
-		A428D98F1E0BD6C000A8ADCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D98E1E0BD6C000A8ADCC /* ViewController.swift */; };
-		A428D9921E0BD6C000A8ADCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428D9901E0BD6C000A8ADCC /* Main.storyboard */; };
 		A428D9951E0BD6C000A8ADCC /* MANetChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */; };
-		A428D9971E0BD6C000A8ADCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A428D9961E0BD6C000A8ADCC /* Assets.xcassets */; };
 		A428D99A1E0BD6C000A8ADCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */; };
 		A428D9A51E0BD6C000A8ADCC /* MANetChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9A41E0BD6C000A8ADCC /* MANetChatTests.swift */; };
 		A428D9B01E0BD6C000A8ADCC /* MANetChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9AF1E0BD6C000A8ADCC /* MANetChatUITests.swift */; };
+		A428D9C21E0C2D3100A8ADCC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9C11E0C2D3100A8ADCC /* TabBarController.swift */; };
+		A428D9C41E0C3E7000A8ADCC /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9C31E0C3E7000A8ADCC /* LoginPageController.swift */; };
+		A428D9C61E0C3EB100A8ADCC /* RegisterPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9C51E0C3EB100A8ADCC /* RegisterPageController.swift */; };
+		A428D9C81E0C8FCF00A8ADCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A428D9C71E0C8FCF00A8ADCC /* GoogleService-Info.plist */; };
+		A428D9CC1E0C976800A8ADCC /* SettingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D9CB1E0C976800A8ADCC /* SettingPageController.swift */; };
+		A44102411E1A6D620094FF18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44102401E1A6D620094FF18 /* Assets.xcassets */; };
+		A457CAB31E0E445300C2674A /* FriendRequestsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CAB21E0E445300C2674A /* FriendRequestsPageController.swift */; };
+		A457CAB51E0EB3EB00C2674A /* FriendsListPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CAB41E0EB3EB00C2674A /* FriendsListPageController.swift */; };
+		A457CAB71E0ECE1200C2674A /* RequestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CAB61E0ECE1200C2674A /* RequestsCell.swift */; };
+		A457CABF1E0F154F00C2674A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CABE1E0F154F00C2674A /* User.swift */; };
+		A498F8191E1610B300F2C293 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A498F8181E1610B300F2C293 /* PinAnnotation.swift */; };
+		A4A0A7901E0D5F2800BF6D4C /* ContactsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A78F1E0D5F2800BF6D4C /* ContactsPageController.swift */; };
+		A4A0A7941E0DCA9200BF6D4C /* SearchFriendPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */; };
+		A4C1A6631E43AAA300BE6EDE /* PublicChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */; };
+		D392B5A333A687031E43FA73 /* Pods_MANetChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A071509EC26E9E31B86B9 /* Pods_MANetChat.framework */; };
+		D4223141A41EAB46D6FFD7BF /* Pods_MANetChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D659CAC58E8B9655E810E6A /* Pods_MANetChatTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +56,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17B29F97AC9B9FE440C2D9B4 /* Pods_MANetChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANetChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F27277484BD998D09A3E6B7 /* Pods-MANetChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChat/Pods-MANetChat.debug.xcconfig"; sourceTree = "<group>"; };
+		263E093FA8960F1685A20874 /* Pods-MANetChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatUITests/Pods-MANetChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3876B0D5EA4E57341EC2A8A5 /* Pods-MANetChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChat/Pods-MANetChat.release.xcconfig"; sourceTree = "<group>"; };
+		4D659CAC58E8B9655E810E6A /* Pods_MANetChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANetChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CBF022310012F88BFC1370 /* Pods-MANetChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatTests/Pods-MANetChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A40E56211E475F6F0015D96E /* MPCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCManager.swift; sourceTree = "<group>"; };
+		A40E56231E479F460015D96E /* ShowNearbyUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNearbyUserVC.swift; sourceTree = "<group>"; };
+		A40F63B91E10621900615246 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		A40F63C11E107C1600615246 /* MANetChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MANetChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		A40F63C61E10B12500615246 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
+		A40F63C91E10CB9000615246 /* RadioVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioVC.swift; sourceTree = "<group>"; };
+		A40F63CB1E10D20400615246 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A414C2711E11DED3006B2BB1 /* ChatListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
 		A428D9891E0BD6C000A8ADCC /* MANetChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANetChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A428D98E1E0BD6C000A8ADCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A428D9911E0BD6C000A8ADCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A428D9941E0BD6C000A8ADCC /* MANetChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MANetChat.xcdatamodel; sourceTree = "<group>"; };
-		A428D9961E0BD6C000A8ADCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A428D9991E0BD6C000A8ADCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A428D99B1E0BD6C000A8ADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A428D9A01E0BD6C000A8ADCC /* MANetChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MANetChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +81,23 @@
 		A428D9AB1E0BD6C000A8ADCC /* MANetChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MANetChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A428D9AF1E0BD6C000A8ADCC /* MANetChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANetChatUITests.swift; sourceTree = "<group>"; };
 		A428D9B11E0BD6C000A8ADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A428D9C11E0C2D3100A8ADCC /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A428D9C31E0C3E7000A8ADCC /* LoginPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
+		A428D9C51E0C3EB100A8ADCC /* RegisterPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageController.swift; sourceTree = "<group>"; };
+		A428D9C71E0C8FCF00A8ADCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A428D9CB1E0C976800A8ADCC /* SettingPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPageController.swift; sourceTree = "<group>"; };
+		A44102401E1A6D620094FF18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A457CAB21E0E445300C2674A /* FriendRequestsPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequestsPageController.swift; sourceTree = "<group>"; };
+		A457CAB41E0EB3EB00C2674A /* FriendsListPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListPageController.swift; sourceTree = "<group>"; };
+		A457CAB61E0ECE1200C2674A /* RequestsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsCell.swift; sourceTree = "<group>"; };
+		A457CABE1E0F154F00C2674A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A498F8181E1610B300F2C293 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		A4A0A78F1E0D5F2800BF6D4C /* ContactsPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPageController.swift; sourceTree = "<group>"; };
+		A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFriendPageController.swift; sourceTree = "<group>"; };
+		A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicChatVC.swift; sourceTree = "<group>"; };
+		B37A071509EC26E9E31B86B9 /* Pods_MANetChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANetChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1FD77EF47989147A011FE91 /* Pods-MANetChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatTests/Pods-MANetChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED1861A98E67297DA6C20736 /* Pods-MANetChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatUITests/Pods-MANetChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40F63CC1E10D20400615246 /* MediaPlayer.framework in Frameworks */,
+				D392B5A333A687031E43FA73 /* Pods_MANetChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4223141A41EAB46D6FFD7BF /* Pods_MANetChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +122,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D88976C607D8D7B6757CD6 /* Pods_MANetChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2608C23B1FF12AFEA6687B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A40F63CB1E10D20400615246 /* MediaPlayer.framework */,
+				B37A071509EC26E9E31B86B9 /* Pods_MANetChat.framework */,
+				4D659CAC58E8B9655E810E6A /* Pods_MANetChatTests.framework */,
+				17B29F97AC9B9FE440C2D9B4 /* Pods_MANetChatUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		949B99350FCE36E4E882C791 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F27277484BD998D09A3E6B7 /* Pods-MANetChat.debug.xcconfig */,
+				3876B0D5EA4E57341EC2A8A5 /* Pods-MANetChat.release.xcconfig */,
+				84CBF022310012F88BFC1370 /* Pods-MANetChatTests.debug.xcconfig */,
+				D1FD77EF47989147A011FE91 /* Pods-MANetChatTests.release.xcconfig */,
+				ED1861A98E67297DA6C20736 /* Pods-MANetChatUITests.debug.xcconfig */,
+				263E093FA8960F1685A20874 /* Pods-MANetChatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A40E56201E475EF10015D96E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A40E56211E475F6F0015D96E /* MPCManager.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A40F63B81E1027DB00615246 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A457CAB61E0ECE1200C2674A /* RequestsCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A40F63C81E10B12A00615246 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A40F63C61E10B12500615246 /* PokeAnnotation.swift */,
+				A498F8181E1610B300F2C293 /* PinAnnotation.swift */,
+				A457CABE1E0F154F00C2674A /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A428D9801E0BD6C000A8ADCC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +186,8 @@
 				A428D9A31E0BD6C000A8ADCC /* MANetChatTests */,
 				A428D9AE1E0BD6C000A8ADCC /* MANetChatUITests */,
 				A428D98A1E0BD6C000A8ADCC /* Products */,
+				949B99350FCE36E4E882C791 /* Pods */,
+				4F2608C23B1FF12AFEA6687B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +205,16 @@
 			isa = PBXGroup;
 			children = (
 				A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */,
-				A428D98E1E0BD6C000A8ADCC /* ViewController.swift */,
-				A428D9901E0BD6C000A8ADCC /* Main.storyboard */,
-				A428D9961E0BD6C000A8ADCC /* Assets.xcassets */,
+				A40E56201E475EF10015D96E /* Services */,
+				A40F63C81E10B12A00615246 /* Models */,
+				A457CABA1E0F119300C2674A /* ViewControllers */,
+				A40F63B81E1027DB00615246 /* Views */,
+				A44102401E1A6D620094FF18 /* Assets.xcassets */,
 				A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */,
 				A428D99B1E0BD6C000A8ADCC /* Info.plist */,
 				A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */,
+				A428D9C71E0C8FCF00A8ADCC /* GoogleService-Info.plist */,
+				A40F63C11E107C1600615246 /* MANetChat-Bridging-Header.h */,
 			);
 			path = MANetChat;
 			sourceTree = "<group>";
@@ -128,6 +237,26 @@
 			path = MANetChatUITests;
 			sourceTree = "<group>";
 		};
+		A457CABA1E0F119300C2674A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A428D9C51E0C3EB100A8ADCC /* RegisterPageController.swift */,
+				A428D9CB1E0C976800A8ADCC /* SettingPageController.swift */,
+				A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */,
+				A40F63B91E10621900615246 /* MapVC.swift */,
+				A40E56231E479F460015D96E /* ShowNearbyUserVC.swift */,
+				A428D9C11E0C2D3100A8ADCC /* TabBarController.swift */,
+				A457CAB41E0EB3EB00C2674A /* FriendsListPageController.swift */,
+				A428D9C31E0C3E7000A8ADCC /* LoginPageController.swift */,
+				A4A0A78F1E0D5F2800BF6D4C /* ContactsPageController.swift */,
+				A457CAB21E0E445300C2674A /* FriendRequestsPageController.swift */,
+				A40F63C91E10CB9000615246 /* RadioVC.swift */,
+				A414C2711E11DED3006B2BB1 /* ChatListVC.swift */,
+				A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A428D9B41E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChat" */;
 			buildPhases = (
+				FFF6105FB5508921E786F0DF /* [CP] Check Pods Manifest.lock */,
 				A428D9851E0BD6C000A8ADCC /* Sources */,
 				A428D9861E0BD6C000A8ADCC /* Frameworks */,
 				A428D9871E0BD6C000A8ADCC /* Resources */,
+				B10C39CB611F7F0698A768B1 /* [CP] Embed Pods Frameworks */,
+				BF4C3E265B6FE3839A8CADDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A428D9B71E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatTests" */;
 			buildPhases = (
+				2DECA38F99A7C6941DF43D0D /* [CP] Check Pods Manifest.lock */,
 				A428D99C1E0BD6C000A8ADCC /* Sources */,
 				A428D99D1E0BD6C000A8ADCC /* Frameworks */,
 				A428D99E1E0BD6C000A8ADCC /* Resources */,
+				B316875AFF0922F32F9B48BF /* [CP] Embed Pods Frameworks */,
+				93F05BB29D54DE1FC13288C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A428D9BA1E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatUITests" */;
 			buildPhases = (
+				9B9404132CCFEDBDF2DB4616 /* [CP] Check Pods Manifest.lock */,
 				A428D9A71E0BD6C000A8ADCC /* Sources */,
 				A428D9A81E0BD6C000A8ADCC /* Frameworks */,
 				A428D9A91E0BD6C000A8ADCC /* Resources */,
+				D6BB2DDD325A043D92EB0C07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +334,7 @@
 					A428D9881E0BD6C000A8ADCC = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = DZ3FYPCUHX;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A428D99F1E0BD6C000A8ADCC = {
@@ -239,8 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A428D99A1E0BD6C000A8ADCC /* LaunchScreen.storyboard in Resources */,
-				A428D9971E0BD6C000A8ADCC /* Assets.xcassets in Resources */,
-				A428D9921E0BD6C000A8ADCC /* Main.storyboard in Resources */,
+				A428D9C81E0C8FCF00A8ADCC /* GoogleService-Info.plist in Resources */,
+				A44102411E1A6D620094FF18 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,14 +398,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DECA38F99A7C6941DF43D0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		93F05BB29D54DE1FC13288C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MANetChatTests/Pods-MANetChatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B9404132CCFEDBDF2DB4616 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B10C39CB611F7F0698A768B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MANetChat/Pods-MANetChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B316875AFF0922F32F9B48BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MANetChatTests/Pods-MANetChatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF4C3E265B6FE3839A8CADDC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MANetChat/Pods-MANetChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6BB2DDD325A043D92EB0C07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MANetChatUITests/Pods-MANetChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFF6105FB5508921E786F0DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A428D9851E0BD6C000A8ADCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40F63CA1E10CB9000615246 /* RadioVC.swift in Sources */,
+				A428D9C41E0C3E7000A8ADCC /* LoginPageController.swift in Sources */,
+				A428D9C61E0C3EB100A8ADCC /* RegisterPageController.swift in Sources */,
+				A40E56241E479F460015D96E /* ShowNearbyUserVC.swift in Sources */,
+				A40F63BA1E10621900615246 /* MapVC.swift in Sources */,
+				A457CAB51E0EB3EB00C2674A /* FriendsListPageController.swift in Sources */,
+				A414C2721E11DED3006B2BB1 /* ChatListVC.swift in Sources */,
 				A428D9951E0BD6C000A8ADCC /* MANetChat.xcdatamodeld in Sources */,
-				A428D98F1E0BD6C000A8ADCC /* ViewController.swift in Sources */,
+				A428D9CC1E0C976800A8ADCC /* SettingPageController.swift in Sources */,
+				A4A0A7941E0DCA9200BF6D4C /* SearchFriendPageController.swift in Sources */,
 				A428D98D1E0BD6C000A8ADCC /* AppDelegate.swift in Sources */,
+				A428D9C21E0C2D3100A8ADCC /* TabBarController.swift in Sources */,
+				A457CABF1E0F154F00C2674A /* User.swift in Sources */,
+				A4A0A7901E0D5F2800BF6D4C /* ContactsPageController.swift in Sources */,
+				A457CAB31E0E445300C2674A /* FriendRequestsPageController.swift in Sources */,
+				A40E56221E475F6F0015D96E /* MPCManager.swift in Sources */,
+				A40F63C71E10B12500615246 /* PokeAnnotation.swift in Sources */,
+				A4C1A6631E43AAA300BE6EDE /* PublicChatVC.swift in Sources */,
+				A498F8191E1610B300F2C293 /* PinAnnotation.swift in Sources */,
+				A457CAB71E0ECE1200C2674A /* RequestsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +581,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A428D9901E0BD6C000A8ADCC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A428D9911E0BD6C000A8ADCC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -417,32 +687,40 @@
 		};
 		A428D9B51E0BD6C000A8ADCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F27277484BD998D09A3E6B7 /* Pods-MANetChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DZ3FYPCUHX;
 				INFOPLIST_FILE = MANetChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MANetChat/MANetChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A428D9B61E0BD6C000A8ADCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3876B0D5EA4E57341EC2A8A5 /* Pods-MANetChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DZ3FYPCUHX;
 				INFOPLIST_FILE = MANetChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kolaxz.MANetChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MANetChat/MANetChat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		A428D9B81E0BD6C000A8ADCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84CBF022310012F88BFC1370 /* Pods-MANetChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +736,7 @@
 		};
 		A428D9B91E0BD6C000A8ADCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1FD77EF47989147A011FE91 /* Pods-MANetChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +752,7 @@
 		};
 		A428D9BB1E0BD6C000A8ADCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1861A98E67297DA6C20736 /* Pods-MANetChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DZ3FYPCUHX;
@@ -487,6 +767,7 @@
 		};
 		A428D9BC1E0BD6C000A8ADCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 263E093FA8960F1685A20874 /* Pods-MANetChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DZ3FYPCUHX;
@@ -518,6 +799,7 @@
 				A428D9B61E0BD6C000A8ADCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A428D9B71E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +808,7 @@
 				A428D9B91E0BD6C000A8ADCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A428D9BA1E0BD6C000A8ADCC /* Build configuration list for PBXNativeTarget "MANetChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +817,7 @@
 				A428D9BC1E0BD6C000A8ADCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

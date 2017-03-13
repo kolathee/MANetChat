@@ -1,0 +1,6 @@
+framework module Pods_MANetChatTests {
+  umbrella header "Pods-MANetChatTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
