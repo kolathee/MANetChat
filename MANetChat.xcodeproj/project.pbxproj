@@ -206,18 +206,12 @@
 		A428D98B1E0BD6C000A8ADCC /* MANetChat */ = {
 			isa = PBXGroup;
 			children = (
-				A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */,
+				A4C754FB1E76709B00548F67 /* Main.storyboard */,
+				A457CABA1E0F119300C2674A /* ViewControllers */,
 				A40E56201E475EF10015D96E /* Services */,
 				A40F63C81E10B12A00615246 /* Models */,
-				A457CABA1E0F119300C2674A /* ViewControllers */,
 				A40F63B81E1027DB00615246 /* Views */,
-				A44102401E1A6D620094FF18 /* Assets.xcassets */,
-				A4C754FB1E76709B00548F67 /* Main.storyboard */,
-				A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */,
-				A428D99B1E0BD6C000A8ADCC /* Info.plist */,
-				A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */,
-				A428D9C71E0C8FCF00A8ADCC /* GoogleService-Info.plist */,
-				A40F63C11E107C1600615246 /* MANetChat-Bridging-Header.h */,
+				F9177B921E76CFBB007ED17D /* Setting */,
 			);
 			path = MANetChat;
 			sourceTree = "<group>";
@@ -258,6 +252,20 @@
 				A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F9177B921E76CFBB007ED17D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */,
+				A44102401E1A6D620094FF18 /* Assets.xcassets */,
+				A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */,
+				A428D99B1E0BD6C000A8ADCC /* Info.plist */,
+				A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */,
+				A428D9C71E0C8FCF00A8ADCC /* GoogleService-Info.plist */,
+				A40F63C11E107C1600615246 /* MANetChat-Bridging-Header.h */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
