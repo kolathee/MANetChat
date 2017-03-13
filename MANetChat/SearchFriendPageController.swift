@@ -6,10 +6,13 @@ import FirebaseAuth
 
 class SearchFriendPageController: UIViewController {
 
-    @IBOutlet weak var outputUIDTextBox: UILabel!
+    @IBOutlet weak var notFoundLabel: UILabel!
     @IBOutlet weak var outputFriendNameTextBox: UILabel!
     @IBOutlet weak var inputSearchTextBox: UITextField!
     @IBOutlet weak var addFriendButton: UIButton!
+    
+    @IBOutlet weak var friendStack: UIStackView!
+    
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let myUID = FIRAuth.auth()?.currentUser?.uid
@@ -20,17 +23,22 @@ class SearchFriendPageController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
     
-    @IBAction func backButtonTapped(_ sender: Any) {
+    func setup(){
+        friendStack.isHidden = true
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
         fetchUser()
     }
-    
-    @IBAction func addFriendButtonTapped(_ sender: Any) {
+
+    @IBAction func addButtonTapped(_ sender: Any) {
         addfriend()
         dismiss(animated: true, completion: nil)
     }
@@ -56,6 +64,7 @@ class SearchFriendPageController: UIViewController {
         referance.child("users").queryOrdered(byChild: "email").queryEqual(toValue: email).observeSingleEvent(of:.value, with:{ (snapshot) in
             // Get user value
             print(snapshot.value!)
+            
             if let users = snapshot.value as? Dictionary<String,AnyObject>{
                 for (key, value) in users {
                     self.friendUID = key
@@ -64,18 +73,18 @@ class SearchFriendPageController: UIViewController {
                         self.friendEmail = dict["email"] as! String?
                     }
                 }
-                self.addFriendButton.isHidden = false
-                self.setOutputSearchResult(uid: self.friendUID!, name: self.friendName!)
+                self.friendStack.isHidden = false
+                self.notFoundLabel.isHidden = true
+                self.setOutputSearchResult(name: self.friendName!)
+                
             } else {
-                self.outputFriendNameTextBox.text = ""
-                self.addFriendButton.isHidden = true
-                self.outputUIDTextBox.text = "Not found this email"
+                self.notFoundLabel.isHidden = false
+                self.friendStack.isHidden = true
             }
         })
     }
     
-    func setOutputSearchResult(uid:String,name:String) -> Void {
-        outputUIDTextBox.text = uid
+    func setOutputSearchResult(name:String) -> Void {
         outputFriendNameTextBox.text = name
     }
     

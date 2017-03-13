@@ -23,8 +23,7 @@ class RegisterPageController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
+    @IBAction func cencelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     

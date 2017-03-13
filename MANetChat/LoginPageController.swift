@@ -16,10 +16,8 @@ class LoginPageController: UIViewController {
     @IBOutlet weak var inputPasswordTextBox: UITextField!
     
     
-    
     //used to count FriendsRequest in createFriendRequestListener() function.
     var friendRequestsUIDList = [String]()
-    
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
