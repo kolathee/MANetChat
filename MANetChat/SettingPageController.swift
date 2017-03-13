@@ -15,7 +15,7 @@ class SettingPageController: UIViewController {
     @IBOutlet weak var profileBackground: UIImageView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         profileBackground.layer.cornerRadius = profileBackground.frame.size.width/2
 
