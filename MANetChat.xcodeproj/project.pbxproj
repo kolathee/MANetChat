@@ -34,6 +34,7 @@
 		A4A0A7901E0D5F2800BF6D4C /* ContactsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A78F1E0D5F2800BF6D4C /* ContactsPageController.swift */; };
 		A4A0A7941E0DCA9200BF6D4C /* SearchFriendPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */; };
 		A4C1A6631E43AAA300BE6EDE /* PublicChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */; };
+		A4C754FC1E76709B00548F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C754FB1E76709B00548F67 /* Main.storyboard */; };
 		D392B5A333A687031E43FA73 /* Pods_MANetChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A071509EC26E9E31B86B9 /* Pods_MANetChat.framework */; };
 		D4223141A41EAB46D6FFD7BF /* Pods_MANetChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D659CAC58E8B9655E810E6A /* Pods_MANetChatTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		A4A0A78F1E0D5F2800BF6D4C /* ContactsPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPageController.swift; sourceTree = "<group>"; };
 		A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFriendPageController.swift; sourceTree = "<group>"; };
 		A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicChatVC.swift; sourceTree = "<group>"; };
+		A4C754FB1E76709B00548F67 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B37A071509EC26E9E31B86B9 /* Pods_MANetChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANetChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FD77EF47989147A011FE91 /* Pods-MANetChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatTests/Pods-MANetChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED1861A98E67297DA6C20736 /* Pods-MANetChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatUITests/Pods-MANetChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				A457CABA1E0F119300C2674A /* ViewControllers */,
 				A40F63B81E1027DB00615246 /* Views */,
 				A44102401E1A6D620094FF18 /* Assets.xcassets */,
+				A4C754FB1E76709B00548F67 /* Main.storyboard */,
 				A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */,
 				A428D99B1E0BD6C000A8ADCC /* Info.plist */,
 				A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */,
@@ -379,6 +382,7 @@
 				A428D99A1E0BD6C000A8ADCC /* LaunchScreen.storyboard in Resources */,
 				A428D9C81E0C8FCF00A8ADCC /* GoogleService-Info.plist in Resources */,
 				A44102411E1A6D620094FF18 /* Assets.xcassets in Resources */,
+				A4C754FC1E76709B00548F67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
