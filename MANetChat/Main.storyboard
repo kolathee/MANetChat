@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A6y-jd-QeJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A6y-jd-QeJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -189,7 +189,7 @@
         <!--Setting-->
         <scene sceneID="61x-BF-6Gc">
             <objects>
-                <viewController id="dRs-Xi-red" sceneMemberID="viewController">
+                <viewController id="dRs-Xi-red" customClass="SettingPageController" customModule="MANetChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q8f-vt-9sR"/>
                         <viewControllerLayoutGuide type="bottom" id="GVs-V1-CAb"/>
@@ -213,6 +213,9 @@
                                 <state key="normal" title="logout">
                                     <color key="titleColor" red="0.75378286839999997" green="0.0" blue="0.0021441706920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="dRs-Xi-red" eventType="touchUpInside" id="beH-3e-S6d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -987,7 +990,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hFD-sH-UQg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="mSJ-Tw-53J">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mSJ-Tw-53J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.75378286839999997" green="0.0" blue="0.0021441706920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1009,7 +1012,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I23-jc-0SB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MNl-3t-lb8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MNl-3t-lb8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.75378286839999997" green="0.0" blue="0.0021441706920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1028,7 +1031,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Ko-79-CHc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Pe-FC-1H0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Pe-FC-1H0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.75378286839999997" green="0.0" blue="0.0021441706920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

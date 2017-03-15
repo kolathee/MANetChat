@@ -12,14 +12,10 @@ import FirebaseDatabase
 
 class SettingPageController: UIViewController {
     
-    @IBOutlet weak var profileBackground: UIImageView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad(){
         super.viewDidLoad()
-        profileBackground.layer.cornerRadius = profileBackground.frame.size.width/2
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +43,7 @@ class SettingPageController: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
-    @IBAction func logoutButtonWasTapped(_ sender: Any) {
+    @IBAction func logoutButtonTapped(_ sender: Any) {
         handleLogout()
     }
 }
