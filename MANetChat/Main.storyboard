@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A6y-jd-QeJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A6y-jd-QeJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8WJ-yV-jBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="-21"/>
+            <point key="canvasLocation" x="-314" y="18"/>
         </scene>
         <!--Register-->
         <scene sceneID="tne-QT-ifu">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="-21"/>
+            <point key="canvasLocation" x="1348" y="18"/>
         </scene>
         <!--Setting-->
         <scene sceneID="61x-BF-6Gc">
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIM-kN-tyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2271" y="1521"/>
+            <point key="canvasLocation" x="2270" y="1521"/>
         </scene>
         <!--Radio-->
         <scene sceneID="EGk-N9-iOZ">
@@ -356,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99W-6t-iJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3161" y="789"/>
+            <point key="canvasLocation" x="3126" y="788"/>
         </scene>
         <!--Friend request-->
         <scene sceneID="KJV-Vf-GxO">
@@ -514,7 +514,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="addButtonTapped:" destination="Y9L-aL-Vtb" eventType="touchUpInside" id="xaz-3u-pmo"/>
+                                            <action selector="addButtonTapped:" destination="Y9L-aL-Vtb" eventType="touchUpInside" id="fNE-bG-jae"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -537,7 +537,7 @@
                                     <action selector="searchButtonTapped:" destination="Y9L-aL-Vtb" eventType="touchUpInside" id="5hs-ju-JkU"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not found this email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwe-16-euq">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not found the email." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwe-16-euq">
                                 <rect key="frame" x="16" y="272" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ymb-zu-j4z"/>
@@ -768,7 +768,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLg-wi-fjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3161" y="-732"/>
+            <point key="canvasLocation" x="3126" y="-733"/>
         </scene>
         <!--Public ChatVC-->
         <scene sceneID="THV-HY-q3G">
@@ -894,7 +894,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iey-tB-bse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="1521"/>
+            <point key="canvasLocation" x="1348" y="1521"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EaA-g3-1Ob">
@@ -917,7 +917,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgs-O2-5lF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3159" y="19"/>
+            <point key="canvasLocation" x="3127" y="18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DUd-4c-LPf">
@@ -940,7 +940,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOu-8g-hJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="788"/>
+            <point key="canvasLocation" x="1348" y="788"/>
         </scene>
         <!--Item-->
         <scene sceneID="2FZ-GA-3f8">
@@ -1005,7 +1005,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olJ-px-jrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="-21"/>
+            <point key="canvasLocation" x="529" y="18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eFU-5v-A3j">

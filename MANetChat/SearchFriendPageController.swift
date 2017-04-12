@@ -39,11 +39,11 @@ class SearchFriendPageController: UIViewController {
     }
 
     @IBAction func addButtonTapped(_ sender: Any) {
-        addfriend()
+        addFriend()
         dismiss(animated: true, completion: nil)
     }
     
-    func addfriend(){
+    func addFriend(){
         //insert user data to database
         let ref = FIRDatabase.database().reference(fromURL: "https://manetchat.firebaseio.com")
         let myReference = ref.child("users").child(myUID!).child("requested").child(friendUID!)
@@ -56,16 +56,20 @@ class SearchFriendPageController: UIViewController {
         friendReference.setValue(dataToFriendDB)
     }
     
-    
     func fetchUser(){
         let referance = FIRDatabase.database().reference(fromURL: "https://manetchat.firebaseio.com")
         let email = inputSearchTextBox.text
         
+        /// Check whether this is my email ?
+        if email == myEmail {
+            notFoundLabel.text = "This is your email."
+            notFoundLabel.isHidden = false
+            return
+        }
         referance.child("users").queryOrdered(byChild: "email").queryEqual(toValue: email).observeSingleEvent(of:.value, with:{ (snapshot) in
-            // Get user value
-            print(snapshot.value!)
             
-            if let users = snapshot.value as? Dictionary<String,AnyObject>{
+            /// Get user value
+            if let users = snapshot.value as? Dictionary < String , AnyObject >{
                 for (key, value) in users {
                     self.friendUID = key
                     if let dict = value as? Dictionary<String,AnyObject>{
@@ -74,6 +78,7 @@ class SearchFriendPageController: UIViewController {
                     }
                 }
                 self.friendStack.isHidden = false
+                self.notFoundLabel.text = "Not found the email."
                 self.notFoundLabel.isHidden = true
                 self.setOutputSearchResult(name: self.friendName!)
                 
