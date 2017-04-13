@@ -13,7 +13,6 @@ class SearchFriendPageController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var friendStack: UIStackView!
     
-    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let myUID = FIRAuth.auth()?.currentUser?.uid
     let myEmail = FIRAuth.auth()?.currentUser?.email
@@ -24,6 +23,7 @@ class SearchFriendPageController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        inputSearchTextBox.becomeFirstResponder()
     }
     
     func setup(){

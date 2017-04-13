@@ -58,9 +58,9 @@ class MPCManager: NSObject {
     }
     
 
-    //====== Send data to a peer =======
+    //====== Send data to specific peer =======
     
-    func sendPublicData(TextMessage text:String, toPeer targetPeer:MCPeerID) -> Bool {
+    func sendPrivateData(TextMessage text:String, toPeer targetPeer:MCPeerID) -> Bool {
         let dataToSend = NSKeyedArchiver.archivedData(withRootObject: "PRIVATEMESSAGE191" + text)
         let peersArray = NSArray(object: targetPeer)
         

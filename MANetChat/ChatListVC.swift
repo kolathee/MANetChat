@@ -16,8 +16,8 @@ class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.cornerRadius = imageView.frame.size.width/2
-        imageView.clipsToBounds = true
+//        imageView.layer.cornerRadius = imageView.frame.size.width/2
+//        imageView.clipsToBounds = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

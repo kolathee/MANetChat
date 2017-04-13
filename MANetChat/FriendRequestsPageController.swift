@@ -60,7 +60,7 @@ class FriendRequestsPageController: UIViewController,UITableViewDelegate,UITable
         //4.insert my information into "friends" child in their database ==================
         let friendInsertReference = rootNodeReference.child("users").child(friend.uid).child("friends").child(appDelegate.myUID!)
         
-        let friendInsertValue = ["name":appDelegate.myName,"email":appDelegate.myEmail]
+        let friendInsertValue = ["name":appDelegate.myName!,"email":appDelegate.myEmail!]
         friendInsertReference.updateChildValues(friendInsertValue)
         
         //5.Delete the request from friend's requested database ===========================
@@ -69,5 +69,8 @@ class FriendRequestsPageController: UIViewController,UITableViewDelegate,UITable
 
         //6.Delete frined who sent requesting from frinedsReuest in appDelegate
         appDelegate.friendsRequest.remove(at: indexOfRowSelected)
+        
+        //7.Reload Table
+        tableView.reloadData()
     }
 }
