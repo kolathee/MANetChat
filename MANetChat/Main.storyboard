@@ -437,6 +437,9 @@
                     <navigationItem key="navigationItem" title="Friend request" id="Nd8-EI-DwE">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="aIe-et-7x3">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="Rot-K4-YKz" id="I6C-1e-FLB"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="VCE-2p-DC7">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -770,7 +773,7 @@
             </objects>
             <point key="canvasLocation" x="3126" y="-733"/>
         </scene>
-        <!--Public ChatVC-->
+        <!--Public Chat-->
         <scene sceneID="THV-HY-q3G">
             <objects>
                 <viewController storyboardIdentifier="indoxPage" id="fqk-Dp-hGL" customClass="PublicChatVC" customModule="MANetChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -783,10 +786,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Public Chat" id="aqh-QM-iHk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-jL-43v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="2273"/>
+            <point key="canvasLocation" x="1348" y="2290"/>
         </scene>
         <!--Chats-->
         <scene sceneID="WnU-h1-aLT">
