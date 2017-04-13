@@ -1,11 +1,4 @@
 
-//  friendsListPageController.swift
-//  MANetChat
-//
-//  Created by Kolathee Payuhawatthana on 12/24/2559 BE.
-//  Copyright © 2559 Kolathee Payuhawattana. All rights reserved.
-//
-
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase

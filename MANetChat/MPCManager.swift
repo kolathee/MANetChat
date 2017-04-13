@@ -110,8 +110,9 @@ extension MPCManager : MCSessionDelegate{
             
         case MCSessionState.notConnected:
             print("\n\(peerID.displayName) Did not connect to session: \(session)\n")
-            let indexOfLostPeer = connectedPeers.index(of: peerID)
-            connectedPeers.remove(at: indexOfLostPeer!)
+            if let indexOfLostPeer = connectedPeers.index(of: peerID){
+                connectedPeers.remove(at: indexOfLostPeer)
+            }
         }
     }
     

@@ -443,6 +443,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="VCE-2p-DC7">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="Rot-K4-YKz" id="x3E-XG-bSV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -22,14 +22,9 @@ class TabBarController: UITabBarController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         if self.selectedIndex != 0 {
             self.selectedIndex = 0
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
     }
     
     func handleLogout() {

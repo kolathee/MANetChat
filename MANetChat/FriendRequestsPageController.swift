@@ -45,7 +45,7 @@ class FriendRequestsPageController: UIViewController,UITableViewDelegate,UITable
         
         //1.Prepare data ==================================================================
         let rootNodeReference = FIRDatabase.database().reference(fromURL:"https://manetchat.firebaseio.com")
-        let friend = appDelegate.friendsRequest[indexOfRowSelected] // Get information of who sent requesting.
+        let friend = appDelegate.friendsRequest[indexOfRowSelected] // Get information whose senting request.
         
         //2.Insert their information into "friends" child in my database ==================
         let myInsertReference = rootNodeReference.child("users").child(appDelegate.myUID!).child("friends").child(friend.uid)
