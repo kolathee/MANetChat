@@ -483,6 +483,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y9L-aL-Vtb" id="NMR-Gi-fVo"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -853,7 +856,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZs-Vg-79t">
                                 <rect key="frame" x="16" y="93" width="343" height="54"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-OS-ieK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-OS-ieK">
                                         <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="Eei-BW-gpq"/>
@@ -1016,10 +1019,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I23-jc-0SB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MNl-3t-lb8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MNl-3t-lb8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.75378286839999997" green="0.0" blue="0.0021441706920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1035,10 +1041,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Ko-79-CHc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Pe-FC-1H0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Pe-FC-1H0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.75378286839999997" green="0.0" blue="0.0021441706920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

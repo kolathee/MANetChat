@@ -4,7 +4,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class SearchFriendPageController: UIViewController {
+class SearchFriendPageController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var notFoundLabel: UILabel!
     @IBOutlet weak var outputFriendNameTextBox: UILabel!
@@ -64,8 +64,10 @@ class SearchFriendPageController: UIViewController {
         if email == myEmail {
             notFoundLabel.text = "This is your email."
             notFoundLabel.isHidden = false
+            friendStack.isHidden = true
             return
         }
+        
         referance.child("users").queryOrdered(byChild: "email").queryEqual(toValue: email).observeSingleEvent(of:.value, with:{ (snapshot) in
             
             /// Get user value
@@ -93,4 +95,12 @@ class SearchFriendPageController: UIViewController {
         outputFriendNameTextBox.text = name
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "\n" {
+            fetchUser()
+            inputSearchTextBox.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 }
