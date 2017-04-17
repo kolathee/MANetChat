@@ -24,9 +24,6 @@ class LoginPageController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
     override func viewDidAppear(_ animated: Bool) {
         if FIRAuth.auth()?.currentUser != nil {
             createFriendRequestListener()
@@ -56,7 +53,7 @@ class LoginPageController: UIViewController {
         
         FIRAuth.auth()?.signIn(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
-                print("Sign in error - code:\(error)")
+                print("Sign in error - code:\(String(describing: error))")
                 self.alertUser(title: "Error", message: "Please try again")
                 return
             } else {
@@ -85,25 +82,24 @@ class LoginPageController: UIViewController {
     func createFriendRequestListener(){
         if let myUID = FIRAuth.auth()?.currentUser?.uid {
             //Create listener
-            let friendRequestReferance = FIRDatabase.database().reference(fromURL:"https://manetchat.firebaseio.com/").child("users").child(myUID).child("friendRequests")
+            let friendRequestReferance = FIRDatabase.database().reference().child("users").child(myUID).child("friendRequests")
             friendRequestReferance.observe(.value, with: { (snapshot) in
                 //Get friendsRequest and put it into friendsRequest in AppDelegate
+                print(snapshot)
                 if let users = snapshot.value as? Dictionary<String,AnyObject>{
-
                     for (key, value) in users {
                         let name = value.objectAt(0)
                         let email = value.objectAt(1)
                         let uid = key
 
-                        if !self.friendRequestsUIDList.contains(uid){
-                            let user = User()
-                            user.uid = uid
-                            user.email = email as! String
-                            user.name = name as! String
-                            self.friendRequestsUIDList.append(uid)
-                            //keep each user's requesting into friendsRequest in share application.
-                            self.appDelegate.friendsRequest.append(user)
-                        }
+                        let user = User()
+                        user.uid = uid
+                        user.email = email as! String
+                        user.name = name as! String
+
+                        self.appDelegate.friendsRequest.append(user)
+                        print(self.appDelegate.friendsRequest)
+                        
                     }
                 }
             })

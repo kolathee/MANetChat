@@ -12,6 +12,8 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userDisplayName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var friendName: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +52,8 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
     func getFriendsListFromFirebase(){
         if let myUID = FIRAuth.auth()?.currentUser?.uid {
             //Create listener
-            let friendRequestReferance = FIRDatabase.database().reference(fromURL:"https://manetchat.firebaseio.com/").child("users").child(myUID).child("friends")
-            friendRequestReferance.observe(.value, with: { (snapshot) in
+            let ref = FIRDatabase.database().reference().child("users").child(myUID).child("friends")
+            ref.observe(.value, with: { (snapshot) in
                 
                 print("friend page : \(snapshot)")
                 //Get friends and put it into friends in AppDelegate

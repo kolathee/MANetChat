@@ -101,15 +101,16 @@ extension MPCManager : MCSessionDelegate{
         switch state {
             
         case MCSessionState.connected:
-            print("\n\(peerID.displayName) connect to session: \(session)\n")
+//            print("\n\(peerID.displayName) connect to session: \(session)\n")
             PublicDelegate?.connectedWithPeer(peerName : peerID.displayName)
             connectedPeers.append(peerID)
             
         case MCSessionState.connecting:
-            print("\n\(peerID.displayName) connecting to session: \(session)\n")
+//            print("\n\(peerID.displayName) connecting to session: \(session)\n")
+            print("")
             
         case MCSessionState.notConnected:
-            print("\n\(peerID.displayName) Did not connect to session: \(session)\n")
+//            print("\n\(peerID.displayName) Did not connect to session: \(session)\n")
             if let indexOfLostPeer = connectedPeers.index(of: peerID){
                 connectedPeers.remove(at: indexOfLostPeer)
             }
@@ -149,7 +150,7 @@ extension MPCManager : MCNearbyServiceAdvertiserDelegate {
     }
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
-        print("\n========= didReceiveInvitationFromPeer \(peerID) =========\n")
+//        print("\n========= didReceiveInvitationFromPeer \(peerID) =========\n")
         //        self.invitationHandler = invitationHandler
         invitationHandler(true, session)
         //        delegate?.invitationWasReceived(fromPeer: peerID.displayName)
@@ -162,9 +163,9 @@ extension MPCManager : MCNearbyServiceBrowserDelegate {
     
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         foundPeers.append(peerID)
-        print("-----------------------------\nFound & invitePeer : " + peerID.displayName)
-        print(foundPeers)
-        print("--------------------------")
+//        print("-----------------------------\nFound & invitePeer : " + peerID.displayName)
+//        print(foundPeers)
+//        print("--------------------------")
         invatePeer(peerID: peerID, to: self.session, timeout: 10)
         PublicDelegate?.foundPeer()
     }
@@ -176,9 +177,9 @@ extension MPCManager : MCNearbyServiceBrowserDelegate {
                 break
             }
         }
-        print("-----------------------------\nLost : " + peerID.displayName)
-        print(foundPeers)
-        print("--------------------------")
+//        print("-----------------------------\nLost : " + peerID.displayName)
+//        print(foundPeers)
+//        print("--------------------------")
         PublicDelegate?.lostPeer()
     }
     

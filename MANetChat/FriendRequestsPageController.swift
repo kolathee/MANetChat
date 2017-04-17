@@ -13,6 +13,8 @@ import FirebaseAuth
 class FriendRequestsPageController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let dbRef = FIRDatabase.database().reference()
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -43,29 +45,23 @@ class FriendRequestsPageController: UIViewController,UITableViewDelegate,UITable
     
     func acceptFriendRequest(indexOfRowSelected:Int) {
         
-        //1.Prepare data ==================================================================
-        let rootNodeReference = FIRDatabase.database().reference(fromURL:"https://manetchat.firebaseio.com")
+        let date = FIRServerValue.timestamp()
         let friend = appDelegate.friendsRequest[indexOfRowSelected] // Get information whose senting request.
         
         //2.Insert their information into "friends" child in my database ==================
-        let myInsertReference = rootNodeReference.child("users").child(appDelegate.myUID!).child("friends").child(friend.uid)
-        
-        let myinsertValue = ["name":friend.name,"email":friend.email]
-        myInsertReference.updateChildValues(myinsertValue)
-        
-        //3.Delete a friend in friendRequests from my database ============================
-        let myDeleteReference = rootNodeReference.child("users").child(appDelegate.myUID!).child("friendRequests").child(friend.uid)
-        myDeleteReference.removeValue()
-        
-        //4.insert my information into "friends" child in their database ==================
-        let friendInsertReference = rootNodeReference.child("users").child(friend.uid).child("friends").child(appDelegate.myUID!)
-        
-        let friendInsertValue = ["name":appDelegate.myName!,"email":appDelegate.myEmail!]
-        friendInsertReference.updateChildValues(friendInsertValue)
-        
-        //5.Delete the request from friend's requested database ===========================
-        let friendDeleteReference = rootNodeReference.child("users").child(friend.uid).child("requested").child(appDelegate.myUID!)
-        friendDeleteReference.removeValue()
+        let myRef = dbRef.child("users").child(appDelegate.myUID!)
+        let myInsertRef = myRef.child("friends").child(friend.uid)
+        let myDeleteRef = myRef.child("friendRequests").child(friend.uid)
+        let myinsertValue = ["name":friend.name, "email":friend.email, "date": date] as [String : Any]
+        myInsertRef.updateChildValues(myinsertValue)
+        myDeleteRef.removeValue()
+
+        let friendRef = dbRef.child("users").child(friend.uid)
+        let friendInsertRef = friendRef.child("friends").child(appDelegate.myUID!)
+        let friendDeleteRef = friendRef.child("requested").child(appDelegate.myUID!)
+        let friendInsertValue = ["name":appDelegate.myName!,"email":appDelegate.myEmail!,"date": date] as [String : Any]
+        friendInsertRef.updateChildValues(friendInsertValue)
+        friendDeleteRef.removeValue()
 
         //6.Delete frined who sent requesting from frinedsReuest in appDelegate
         appDelegate.friendsRequest.remove(at: indexOfRowSelected)
