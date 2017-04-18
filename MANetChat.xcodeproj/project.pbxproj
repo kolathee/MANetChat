@@ -30,7 +30,7 @@
 		A457CAB51E0EB3EB00C2674A /* FriendsListPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CAB41E0EB3EB00C2674A /* FriendsListPageController.swift */; };
 		A457CAB71E0ECE1200C2674A /* RequestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CAB61E0ECE1200C2674A /* RequestsCell.swift */; };
 		A457CABF1E0F154F00C2674A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CABE1E0F154F00C2674A /* User.swift */; };
-		A468EAD01EA13A3E007A8391 /* friendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A468EACF1EA13A3E007A8391 /* friendViewCell.swift */; };
+		A468EAD01EA13A3E007A8391 /* FriendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A468EACF1EA13A3E007A8391 /* FriendViewCell.swift */; };
 		A498F8191E1610B300F2C293 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A498F8181E1610B300F2C293 /* PinAnnotation.swift */; };
 		A4A0A7941E0DCA9200BF6D4C /* SearchFriendPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */; };
 		A4C1A6631E43AAA300BE6EDE /* PublicChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */; };
@@ -92,7 +92,7 @@
 		A457CAB41E0EB3EB00C2674A /* FriendsListPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListPageController.swift; sourceTree = "<group>"; };
 		A457CAB61E0ECE1200C2674A /* RequestsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsCell.swift; sourceTree = "<group>"; };
 		A457CABE1E0F154F00C2674A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A468EACF1EA13A3E007A8391 /* friendViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = friendViewCell.swift; sourceTree = "<group>"; };
+		A468EACF1EA13A3E007A8391 /* FriendViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewCell.swift; sourceTree = "<group>"; };
 		A498F8181E1610B300F2C293 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFriendPageController.swift; sourceTree = "<group>"; };
 		A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicChatVC.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				A457CAB61E0ECE1200C2674A /* RequestsCell.swift */,
-				A468EACF1EA13A3E007A8391 /* friendViewCell.swift */,
+				A468EACF1EA13A3E007A8391 /* FriendViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -544,7 +544,7 @@
 				A40E56241E479F460015D96E /* ShowNearbyUserVC.swift in Sources */,
 				A40F63BA1E10621900615246 /* MapVC.swift in Sources */,
 				A457CAB51E0EB3EB00C2674A /* FriendsListPageController.swift in Sources */,
-				A468EAD01EA13A3E007A8391 /* friendViewCell.swift in Sources */,
+				A468EAD01EA13A3E007A8391 /* FriendViewCell.swift in Sources */,
 				A414C2721E11DED3006B2BB1 /* ChatListVC.swift in Sources */,
 				A428D9951E0BD6C000A8ADCC /* MANetChat.xcdatamodeld in Sources */,
 				A428D9CC1E0C976800A8ADCC /* SettingPageController.swift in Sources */,
