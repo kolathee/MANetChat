@@ -12,9 +12,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userDisplayName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var friendName: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -54,7 +52,6 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
             //Create listener
             let ref = FIRDatabase.database().reference().child("users").child(myUID).child("friends")
             ref.observe(.value, with: { (snapshot) in
-                
                 print("friend page : \(snapshot)")
                 //Get friends and put it into friends in AppDelegate
                 if let users = snapshot.value as? Dictionary<String,AnyObject>{
@@ -79,5 +76,6 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
             })
         }
     }
+    
     
 }

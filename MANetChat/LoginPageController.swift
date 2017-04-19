@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class LoginPageController: UIViewController {
+class LoginPageController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var inputEmailTextBox: UITextField!
     @IBOutlet weak var inputPasswordTextBox: UITextField!
@@ -60,7 +60,6 @@ class LoginPageController: UIViewController {
                 self.appDelegate.currentUser = FIRAuth.auth()?.currentUser
                 self.appDelegate.myEmail = self.appDelegate.currentUser?.email
                 self.appDelegate.myUID = self.appDelegate.currentUser?.uid
-
                 self.createFriendRequestListener()
                 self.goToUserMainView()
             }
@@ -104,5 +103,18 @@ class LoginPageController: UIViewController {
                 }
             })
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "\n" {
+            if textField == inputEmailTextBox {
+                inputPasswordTextBox.becomeFirstResponder()
+            } else if textField == inputPasswordTextBox {
+                inputPasswordTextBox.resignFirstResponder()
+                handleLogin()
+            }
+            return false
+        }
+        return true
     }
 }
