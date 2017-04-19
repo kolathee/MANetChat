@@ -360,7 +360,9 @@
                             <constraint firstItem="vlL-Uf-28p" firstAttribute="leading" secondItem="jA7-db-Ush" secondAttribute="leading" id="vzE-aO-VmM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Radio" image="radio" id="NXX-vq-8Oo"/>
+                    <tabBarItem key="tabBarItem" title="Radio" image="radio" id="NXX-vq-8Oo">
+                        <inset key="imageInsets" minX="1" minY="1.5" maxX="1" maxY="0.5"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="channelButton" destination="2iT-WJ-me3" id="K4q-Jz-w3e"/>
                         <outlet property="pickerView" destination="MUr-Qf-Wc8" id="AKf-Kf-5dy"/>
@@ -787,22 +789,30 @@
                                     <outlet property="delegate" destination="RWP-PT-7hN" id="ZiF-XT-eRA"/>
                                 </connections>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0n4-8Z-JPg">
-                                <rect key="frame" x="301" y="544" width="54" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyF-8S-T9A">
+                                <rect key="frame" x="304" y="548" width="55" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="1fA-fE-U9H"/>
-                                    <constraint firstAttribute="width" constant="54" id="eNB-wP-jRl"/>
+                                    <constraint firstAttribute="width" constant="55" id="cPb-NP-iO0"/>
+                                    <constraint firstAttribute="height" constant="55" id="u8j-zV-Oeg"/>
                                 </constraints>
-                            </imageView>
+                                <size key="titleShadowOffset" width="3" height="2"/>
+                                <state key="normal" image="person_logo">
+                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="userLogoTapped:" destination="RWP-PT-7hN" eventType="touchUpInside" id="oRn-SG-YXg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0n4-8Z-JPg" secondAttribute="trailing" constant="20" id="JEz-vG-W15"/>
+                            <constraint firstItem="DyF-8S-T9A" firstAttribute="trailing" secondItem="kkL-Hc-fZo" secondAttribute="trailingMargin" id="7H1-yY-bp5"/>
+                            <constraint firstItem="lWP-yh-WOw" firstAttribute="top" secondItem="DyF-8S-T9A" secondAttribute="bottom" constant="15" id="GuQ-yr-p9p"/>
                             <constraint firstItem="9k8-7P-vce" firstAttribute="top" secondItem="HgV-BG-Og9" secondAttribute="bottom" id="QHn-Dj-Ijv"/>
                             <constraint firstItem="9k8-7P-vce" firstAttribute="leading" secondItem="kkL-Hc-fZo" secondAttribute="leading" id="brH-hH-dPf"/>
-                            <constraint firstItem="lWP-yh-WOw" firstAttribute="top" secondItem="0n4-8Z-JPg" secondAttribute="bottom" constant="20" id="i0j-8Z-Ula"/>
                             <constraint firstAttribute="trailing" secondItem="9k8-7P-vce" secondAttribute="trailing" id="mMg-ZL-dVw"/>
                             <constraint firstItem="lWP-yh-WOw" firstAttribute="top" secondItem="9k8-7P-vce" secondAttribute="bottom" id="nyi-TE-gF6"/>
+                            <constraint firstItem="DyF-8S-T9A" firstAttribute="trailing" secondItem="kkL-Hc-fZo" secondAttribute="trailingMargin" id="zmZ-9Q-yyd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="GWI-3z-em7">
@@ -822,7 +832,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLg-wi-fjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3126" y="-733"/>
+            <point key="canvasLocation" x="3125.5999999999999" y="-733.5832083958021"/>
         </scene>
         <!--Public Chat-->
         <scene sceneID="THV-HY-q3G">
@@ -989,11 +999,13 @@
             </objects>
             <point key="canvasLocation" x="3127" y="18"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Chats-->
         <scene sceneID="DUd-4c-LPf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jgO-js-jkm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="Kyq-iu-5dR"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="talk" id="Kyq-iu-5dR">
+                        <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i3z-oz-Spg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1013,11 +1025,13 @@
             </objects>
             <point key="canvasLocation" x="1348" y="788"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="2FZ-GA-3f8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jWa-wY-L79" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="global" selectedImage="global" id="5Ye-gI-Zwo"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="global" selectedImage="global" id="5Ye-gI-Zwo">
+                        <inset key="imageInsets" minX="1.5" minY="2" maxX="1.5" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="y9O-RF-eCZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1033,11 +1047,13 @@
             </objects>
             <point key="canvasLocation" x="2270" y="-732"/>
         </scene>
-        <!--Item-->
+        <!--Setting-->
         <scene sceneID="qgk-mn-Xyq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cjS-69-z6i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="setting" selectedImage="setting" id="1wI-Ak-M9u"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="setting" selectedImage="setting" id="1wI-Ak-M9u">
+                        <inset key="imageInsets" minX="1.5" minY="2" maxX="1.5" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aag-XQ-T6w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1125,12 +1141,13 @@
     </scenes>
     <resources>
         <image name="appLogo" width="323" height="291"/>
-        <image name="global" width="22" height="22"/>
+        <image name="global" width="30" height="30"/>
         <image name="personY" width="128" height="128"/>
         <image name="person_logo" width="649" height="659"/>
-        <image name="radio" width="30" height="22"/>
+        <image name="radio" width="30" height="30"/>
         <image name="radioWall" width="512" height="512"/>
-        <image name="setting" width="22" height="22"/>
+        <image name="setting" width="30" height="30"/>
+        <image name="talk" width="30" height="27"/>
     </resources>
     <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
 </document>
