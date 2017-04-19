@@ -673,24 +673,24 @@
                                 <rect key="frame" x="0.0" y="176" width="375" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsCell" rowHeight="48" id="GAm-my-U4m" customClass="FriendViewCell" customModule="MANetChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="48"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsCell" rowHeight="51" id="GAm-my-U4m" customClass="FriendViewCell" customModule="MANetChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GAm-my-U4m" id="h3D-Ua-S1O">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personY" translatesAutoresizingMaskIntoConstraints="NO" id="WF2-bQ-cyo">
-                                                    <rect key="frame" x="17" y="9" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-q7-35N">
-                                                    <rect key="frame" x="55" y="13" width="42" height="21"/>
+                                                    <rect key="frame" x="46" y="15" width="321" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personY" translatesAutoresizingMaskIntoConstraints="NO" id="WF2-bQ-cyo">
+                                                    <rect key="frame" x="8" y="10" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -698,6 +698,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4c9-Cp-lZA" id="VhK-29-imI"/>
+                                    <outlet property="delegate" destination="4c9-Cp-lZA" id="e1G-P2-bHC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -768,7 +772,7 @@
         <!--Map-->
         <scene sceneID="7pu-wV-xq7">
             <objects>
-                <viewController id="RWP-PT-7hN" sceneMemberID="viewController">
+                <viewController id="RWP-PT-7hN" customClass="MapVC" customModule="MANetChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HgV-BG-Og9"/>
                         <viewControllerLayoutGuide type="bottom" id="lWP-yh-WOw"/>
@@ -779,6 +783,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9k8-7P-vce">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RWP-PT-7hN" id="ZiF-XT-eRA"/>
+                                </connections>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0n4-8Z-JPg">
                                 <rect key="frame" x="301" y="544" width="54" height="54"/>
@@ -801,11 +808,17 @@
                     <navigationItem key="navigationItem" title="Map" id="GWI-3z-em7">
                         <barButtonItem key="leftBarButtonItem" title="Send Location" id="Kk2-zb-CdI">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sendLocationButtonWasTapped:" destination="RWP-PT-7hN" id="GY1-pd-buM"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Notices" id="lM2-Ex-f7V">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="9k8-7P-vce" id="TjH-OO-EGv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLg-wi-fjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
