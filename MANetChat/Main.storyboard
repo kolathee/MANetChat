@@ -1143,7 +1143,7 @@
         <image name="appLogo" width="323" height="291"/>
         <image name="global" width="30" height="30"/>
         <image name="personY" width="128" height="128"/>
-        <image name="person_logo" width="649" height="659"/>
+        <image name="person_logo" width="324" height="329"/>
         <image name="radio" width="30" height="30"/>
         <image name="radioWall" width="512" height="512"/>
         <image name="setting" width="30" height="30"/>
