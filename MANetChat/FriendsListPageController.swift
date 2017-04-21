@@ -27,7 +27,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
 
     func setUpPage(){
         //Set display name
-        userDisplayName.text = appDeledate?.myEmail
+        userDisplayName.text = appDelegate?.myEmail
         getFriendsListFromFirebase()
     }
     
@@ -38,7 +38,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (appDeledate?.friends.count)!
+        return (appDelegate?.friends.count)!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -64,8 +64,8 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
                             user.name = detail["name"] as! String
                             
                             //Keep each user's requesting into friendsRequest in share application.
-                            self.appDeledate!.friends.append(user)
-                            print(self.appDeledate?.friends ?? "nil")
+                            self.appDelegate!.friends.append(user)
+                            print(self.appDelegate?.friends ?? "nil")
                             self.tableView.reloadData()
                         }
                     }
