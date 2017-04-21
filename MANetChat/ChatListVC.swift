@@ -19,12 +19,12 @@ class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return appDelegate.onlineFriends.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "privateChatCell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "privateChatCell", for: indexPath) as! FriendViewCell
+        cell.friendName.text = appDelegate.onlineFriends[indexPath.row].name
         return cell
     }
 }

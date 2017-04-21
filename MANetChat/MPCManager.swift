@@ -29,10 +29,13 @@ class MPCManager: NSObject {
     var connectedPeers = [MCPeerID]()
     var invitationHandler : ((Bool,MCSession)->Void)!
     
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     //====== Inintialize =================================================
     
     override init(){
         super.init()
+        
     }
     
     init(userName:String){
@@ -107,7 +110,7 @@ extension MPCManager : MCSessionDelegate{
             
         case MCSessionState.connecting:
 //            print("\n\(peerID.displayName) connecting to session: \(session)\n")
-            print("")
+            print("", terminator: "")
             
         case MCSessionState.notConnected:
 //            print("\n\(peerID.displayName) Did not connect to session: \(session)\n")
@@ -115,6 +118,17 @@ extension MPCManager : MCSessionDelegate{
                 connectedPeers.remove(at: indexOfLostPeer)
             }
         }
+        
+        let friends = appDelegate.friends
+        let onlineFriends = friends.filter {
+            let name = $0.name
+            if connectedPeers.contains(where: {$0.displayName == name}) {
+                return true
+            }
+            return false
+        }
+        appDelegate.onlineFriends = onlineFriends
+        
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
