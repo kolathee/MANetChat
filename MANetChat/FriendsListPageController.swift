@@ -20,7 +20,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
         if FirstTimeViewAppear {
             setUpPage()
             FirstTimeViewAppear = false
-            imageView.layer.cornerRadius = imageView.frame.size.width/2
+            imageView.layer.cornerRadius = imageView.frame.size.width / 2
             imageView.clipsToBounds = true
         }
     }
@@ -53,21 +53,21 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
         if let myUID = FIRAuth.auth()?.currentUser?.uid {
             //Create listener
             let ref = FIRDatabase.database().reference().child("users").child(myUID).child("friends")
-            ref.observe(.value, with: { (snapshot) in
+            ref.queryOrdered(byChild: "date").observe(.value, with: { (snapshot) in
                 //Get friends and put it into friends in AppDelegate
-                if let users = snapshot.value as? Dictionary<String,AnyObject>{
-                    for (key, value) in users {
-                        let fName = value["name"] as! String
-                        let fEmail = value["email"] as! String
-                        let fUid = key
-                        let user = User()
-                        user.uid = fUid
-                        user.email = fEmail
-                        user.name = fName
-                        //keep each user's requesting into friendsRequest in share application.
-                        self.appDeledate!.friends.append(user)
-                        print(self.appDeledate?.friends ?? "nil")
-                        self.tableView.reloadData()
+                if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
+                    for snap in snapshot {
+                        if let detail = snap.value as? [String:AnyObject] {
+                            let user = User()
+                            user.uid = snap.key
+                            user.email = detail["email"] as! String
+                            user.name = detail["name"] as! String
+                            
+                            //Keep each user's requesting into friendsRequest in share application.
+                            self.appDeledate!.friends.append(user)
+                            print(self.appDeledate?.friends ?? "nil")
+                            self.tableView.reloadData()
+                        }
                     }
                 }
             })
