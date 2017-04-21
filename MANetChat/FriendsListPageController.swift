@@ -5,7 +5,7 @@ import FirebaseDatabase
 
 class FriendsListPageController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
-    let appDeledate = UIApplication.shared.delegate as? AppDelegate
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     var FirstTimeViewAppear = true
     
     @IBOutlet weak var tableView: UITableView!
@@ -33,7 +33,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendsCell", for: indexPath) as! FriendViewCell
-        cell.friendName.text = appDeledate?.friends[indexPath.row].name
+        cell.friendName.text = appDelegate?.friends[indexPath.row].name
         return cell
     }
     
