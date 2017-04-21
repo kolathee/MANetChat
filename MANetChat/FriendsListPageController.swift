@@ -54,6 +54,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
             //Create listener
             let ref = FIRDatabase.database().reference().child("users").child(myUID).child("friends")
             ref.queryOrdered(byChild: "date").observe(.value, with: { (snapshot) in
+                self.appDelegate?.friends.removeAll()
                 //Get friends and put it into friends in AppDelegate
                 if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
                     for snap in snapshot {
