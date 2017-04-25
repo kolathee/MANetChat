@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate,MPCManagerConnectionStatus {
     
+    @IBOutlet weak var tableView: UITableView!
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var imageView: UIImageView!
@@ -26,5 +27,9 @@ class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "privateChatCell", for: indexPath) as! FriendViewCell
         cell.friendName.text = appDelegate.onlineFriends[indexPath.row].name
         return cell
+    }
+    
+    func connectionDidChange() {
+        tableView.reloadData()
     }
 }

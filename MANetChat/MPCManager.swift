@@ -15,10 +15,15 @@ protocol MPCManagerPrivateDelegate {
     func receivePrivateData(message:String, fromPeer:MCPeerID)
 }
 
+protocol MPCManagerConnectionStatus {
+    func connectionDidChange()
+}
+
 class MPCManager: NSObject {
     
     var PublicDelegate: MPCManagerPublicDelegate?
     var privateMessageDelegate: MPCManagerPrivateDelegate?
+    var connectionStatusDelegate: MPCManagerConnectionStatus?
     
     var session : MCSession!
     var peer : MCPeerID!
@@ -104,16 +109,15 @@ extension MPCManager : MCSessionDelegate{
         switch state {
             
         case MCSessionState.connected:
-//            print("\n\(peerID.displayName) connect to session: \(session)\n")
+            print("\n\(peerID.displayName) connect to session: \(session)")
             PublicDelegate?.connectedWithPeer(peerName : peerID.displayName)
             connectedPeers.append(peerID)
             
         case MCSessionState.connecting:
-//            print("\n\(peerID.displayName) connecting to session: \(session)\n")
-            print("", terminator: "")
+            print("\n\(peerID.displayName) connecting to session: \(session)")
             
         case MCSessionState.notConnected:
-//            print("\n\(peerID.displayName) Did not connect to session: \(session)\n")
+            print("\n\(peerID.displayName) Did not connect to session: \(session)")
             if let indexOfLostPeer = connectedPeers.index(of: peerID){
                 connectedPeers.remove(at: indexOfLostPeer)
             }
@@ -128,7 +132,8 @@ extension MPCManager : MCSessionDelegate{
             return false
         }
         appDelegate.onlineFriends = onlineFriends
-        
+        print("Online friend : \(onlineFriends)")
+        connectionStatusDelegate?.connectionDidChange()
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
