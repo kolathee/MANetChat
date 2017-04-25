@@ -851,7 +851,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-jL-43v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="2290"/>
+            <point key="canvasLocation" x="1694" y="2290"/>
+        </scene>
+        <!--Private Chat-->
+        <scene sceneID="cT6-jD-bjc">
+            <objects>
+                <viewController id="IdR-Du-mrP" customClass="PrivateChatVC" customModule="MANetChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nsw-sw-XAb"/>
+                        <viewControllerLayoutGuide type="bottom" id="66P-hs-NmQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QqH-gq-L6S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Private Chat" id="mJx-wj-bNC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baZ-JP-YP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="2290"/>
         </scene>
         <!--Chats-->
         <scene sceneID="WnU-h1-aLT">
@@ -889,7 +908,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bpi-H3-nzC" id="l3M-gO-7IZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personY" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-OX-ePZ">
@@ -907,6 +926,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="friendName" destination="ezg-Eg-paE" id="l7D-mU-qZe"/>
+                                            <segue destination="IdR-Du-mrP" kind="show" id="f5T-EA-rBD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
