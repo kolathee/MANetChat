@@ -12,11 +12,14 @@ class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate,MPC
     
     @IBOutlet weak var tableView: UITableView!
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var mpcManager:MPCManager?
     
     @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mpcManager = appDelegate.mpcManager
+        mpcManager?.connectionStatusDelegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,6 +33,8 @@ class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate,MPC
     }
     
     func connectionDidChange() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
