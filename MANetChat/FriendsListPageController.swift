@@ -27,8 +27,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
 
     func setUpPage(){
         //Set display name
-        userDisplayName.text = appDelegate?.myEmail
-        getFriendsListFromFirebase()
+        userDisplayName.text = appDelegate?.myName
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,29 +48,4 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
         return 51
     }
     
-    func getFriendsListFromFirebase(){
-        if let myUID = FIRAuth.auth()?.currentUser?.uid {
-            //Create listener
-            let ref = FIRDatabase.database().reference().child("users").child(myUID).child("friends")
-            ref.queryOrdered(byChild: "date").observe(.value, with: { (snapshot) in
-                self.appDelegate?.friends.removeAll()
-                //Get friends and put it into friends in AppDelegate
-                if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
-                    for snap in snapshot {
-                        if let detail = snap.value as? [String:AnyObject] {
-                            let user = User()
-                            user.uid = snap.key
-                            user.email = detail["email"] as! String
-                            user.name = detail["name"] as! String
-                            
-                            //Keep each user's requesting into friendsRequest in share application.
-                            self.appDelegate!.friends.append(user)
-                            print(self.appDelegate?.friends ?? "nil")
-                            self.tableView.reloadData()
-                        }
-                    }
-                }
-            })
-        }
-    }
 }

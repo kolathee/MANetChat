@@ -45,20 +45,5 @@ class TabBarController: UITabBarController {
         self.appDelegate.myEmail = FIRAuth.auth()?.currentUser?.email
         self.appDelegate.myUID = FIRAuth.auth()?.currentUser?.uid
         
-        //Get user's name
-        let myReference = FIRDatabase.database().reference(fromURL: "https://manetchat.firebaseio.com")
-        myReference.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).queryLimited(toLast:3).observe(.value, with: { (snapshot) in
-            if let user = snapshot.value as? Dictionary<String,AnyObject>{
-                for (key,value) in user {
-                    if key == "name" {
-                        self.appDelegate.myName = value as? String
-                        //Create MPCManager with User's name
-                        self.appDelegate.mpcManager = MPCManager(userName: self.appDelegate.myName!)
-                        self.appDelegate.mpcManager?.advertiser.startAdvertisingPeer()
-                        self.appDelegate.mpcManager?.browser.startBrowsingForPeers()
-                    }
-                }
-            }
-        })
-    }
+        }
 }

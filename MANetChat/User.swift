@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
-class User: NSObject {
+class User: NSManagedObject {
     
-    private var _name:String!
-    private var _uid:String!
-    private var _email:String!
+    private var _name   :   String!
+    private var _uid    :   String!
+    private var _email  :   String!
+    private var _date   :   String!
     
     var name:String {
         get {
             return _name
-        }
-        set(name) {
+        } set(name) {
             _name = name
         }
     }
@@ -26,18 +27,24 @@ class User: NSObject {
     var uid:String {
         get {
             return _uid
-        }
-        set(uid) {
+        } set(uid) {
             _uid = uid
         }
     }
     
-    var email:String {
+    var email : String {
         get {
             return _email
-        }
-        set(email){
+        } set(email) {
             _email = email
+        }
+    }
+    
+    var date : String {
+        get {
+            return _date
+        } set(date) {
+            _date = date
         }
     }
 }

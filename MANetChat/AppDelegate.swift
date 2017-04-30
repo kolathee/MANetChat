@@ -19,20 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var friendsRequest = [User]()
     var friends = [User]()
     var onlineFriends = [User]()
-    var currentUser:FIRUser?
-    var myUID:String?
-    var myEmail:String?
-    var myName:String?
+    var currentUser: FIRUser?
+    var myUID: String?
+    var myEmail: String?
+    var myName: String?
+    var coreDataManager: CoreDataManager?
     
     func clearAllData(){
         friendsRequest.removeAll()
         friends.removeAll()
+        onlineFriends.removeAll()
+        currentUser = nil
+        myUID?.removeAll()
         myEmail?.removeAll()
         myName?.removeAll()
-        myUID?.removeAll()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        FIRApp.configure()
         
         do {
             Network.reachability = try Reachability(hostname: "www.google.com")
@@ -46,8 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print(error)
         }
-        
-        FIRApp.configure()
         return true
     }
 

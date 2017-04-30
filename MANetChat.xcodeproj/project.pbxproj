@@ -11,7 +11,6 @@
 		A40E56221E475F6F0015D96E /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E56211E475F6F0015D96E /* MPCManager.swift */; };
 		A40E56241E479F460015D96E /* ShowNearbyUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E56231E479F460015D96E /* ShowNearbyUserVC.swift */; };
 		A40F63BA1E10621900615246 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F63B91E10621900615246 /* MapVC.swift */; };
-		A40F63C71E10B12500615246 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F63C61E10B12500615246 /* PokeAnnotation.swift */; };
 		A40F63CA1E10CB9000615246 /* RadioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F63C91E10CB9000615246 /* RadioVC.swift */; };
 		A40F63CC1E10D20400615246 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40F63CB1E10D20400615246 /* MediaPlayer.framework */; };
 		A414C2721E11DED3006B2BB1 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414C2711E11DED3006B2BB1 /* ChatListVC.swift */; };
@@ -70,7 +69,6 @@
 		A40E56231E479F460015D96E /* ShowNearbyUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNearbyUserVC.swift; sourceTree = "<group>"; };
 		A40F63B91E10621900615246 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		A40F63C11E107C1600615246 /* MANetChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MANetChat-Bridging-Header.h"; sourceTree = "<group>"; };
-		A40F63C61E10B12500615246 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 		A40F63C91E10CB9000615246 /* RadioVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioVC.swift; sourceTree = "<group>"; };
 		A40F63CB1E10D20400615246 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A414C2711E11DED3006B2BB1 /* ChatListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		A40F63C81E10B12A00615246 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A40F63C61E10B12500615246 /* PokeAnnotation.swift */,
 				A498F8181E1610B300F2C293 /* PinAnnotation.swift */,
 				A457CABE1E0F154F00C2674A /* User.swift */,
 			);
@@ -565,7 +562,6 @@
 				A48DBCE31EB1071F006F8D1D /* Reachability.swift in Sources */,
 				A457CAB31E0E445300C2674A /* FriendRequestsPageController.swift in Sources */,
 				A40E56221E475F6F0015D96E /* MPCManager.swift in Sources */,
-				A40F63C71E10B12500615246 /* PokeAnnotation.swift in Sources */,
 				A4C1A6631E43AAA300BE6EDE /* PublicChatVC.swift in Sources */,
 				A4B7C61E1EAA65570000E4DC /* PrivateChatVC.swift in Sources */,
 				A498F8191E1610B300F2C293 /* PinAnnotation.swift in Sources */,
