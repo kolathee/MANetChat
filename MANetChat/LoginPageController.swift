@@ -21,20 +21,45 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
     var coreDataManager : CoreDataManager!
     var friendsListComplete : Bool!
     var myInformationComplete : Bool!
+    var allowToGoMainView = false
+    var reachability : Reachability?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            try appDelegate.reachability = Reachability()
+        } catch {
+            print("Error : it's not able to use 'Reachability'")
+        }
+        reachability = appDelegate.reachability
+        appDelegate.coreDataManager = CoreDataManager()
+        coreDataManager = appDelegate.coreDataManager
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if FIRAuth.auth()?.currentUser != nil {
-            setUpData()
+            if (reachability?.isConnectedToNetwork)! {
+                allowToGoMainView = true
+                setUpData()
+            } else {
+                let user = coreDataManager.fetchData(enitityName: "MyInformation", at: "uid", value: (FIRAuth.auth()?.currentUser?.uid)!)
+                self.appDelegate.myName = user[0].value(forKey: "name") as? String
+                self.setUpMPCManager(with_name: self.appDelegate.myName!)
+                let friends = coreDataManager.fetchAllData(enitityName: "Friend")
+                for person in friends {
+                    let user = User()
+                    user.uid = person.value(forKey: "uid") as! String
+                    user.email = person.value(forKey: "email") as! String
+                    user.name = person.value(forKey: "name") as! String
+                    user.date = person.value(forKey: "date") as! String
+                    appDelegate.friends.append(user)
+                }
+                goToUserMainView()
+            }
         }
     }
 
     func setUpData(){
-        appDelegate.coreDataManager = CoreDataManager()
-        coreDataManager = appDelegate.coreDataManager
         friendsListComplete = false
         myInformationComplete = false
         getFriendRequestsFromFirebase()
@@ -86,7 +111,7 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
                 }
                 
                 self.myInformationComplete = true
-                if self.myInformationComplete && self.friendsListComplete {
+                if self.myInformationComplete && self.friendsListComplete && self.allowToGoMainView {
                     self.goToUserMainView()
                 }
             }
@@ -119,7 +144,7 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
                     }
                     
                     self.friendsListComplete = true
-                    if self.myInformationComplete && self.friendsListComplete {
+                    if self.myInformationComplete && self.friendsListComplete && self.allowToGoMainView {
                         self.goToUserMainView()
                     }
                 }

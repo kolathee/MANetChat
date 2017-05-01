@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var myEmail: String?
     var myName: String?
     var coreDataManager: CoreDataManager?
+    var reachability: Reachability?
     
     func clearAllData(){
         friendsRequest.removeAll()
