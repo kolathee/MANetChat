@@ -38,24 +38,24 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         if FIRAuth.auth()?.currentUser != nil {
-            if (reachability?.isConnectedToNetwork)! {
+//            if (reachability?.isConnectedToNetwork)! {
                 allowToGoMainView = true
                 setUpData()
-            } else {
-                let user = coreDataManager.fetchData(enitityName: "MyInformation", at: "uid", value: (FIRAuth.auth()?.currentUser?.uid)!)
-                self.appDelegate.myName = user[0].value(forKey: "name") as? String
-                self.setUpMPCManager(with_name: self.appDelegate.myName!)
-                let friends = coreDataManager.fetchAllData(enitityName: "Friend")
-                for person in friends {
-                    let user = User()
-                    user.uid = person.value(forKey: "uid") as! String
-                    user.email = person.value(forKey: "email") as! String
-                    user.name = person.value(forKey: "name") as! String
-                    user.date = person.value(forKey: "date") as! String
-                    appDelegate.friends.append(user)
-                }
-                goToUserMainView()
-            }
+//            } else {
+//                let user = coreDataManager.fetchData(enitityName: "MyInformation", at: "uid", value: (FIRAuth.auth()?.currentUser?.uid)!)
+//                self.appDelegate.myName = user[0].value(forKey: "name") as? String
+//                self.setUpMPCManager(with_name: self.appDelegate.myName!)
+//                let friends = coreDataManager.fetchAllData(enitityName: "Friend")
+//                for person in friends {
+//                    let user = User()
+//                    user.uid = person.value(forKey: "uid") as! String
+//                    user.email = person.value(forKey: "email") as! String
+//                    user.name = person.value(forKey: "name") as! String
+//                    user.date = person.value(forKey: "date") as! String
+//                    appDelegate.friends.append(user)
+//                }
+//                goToUserMainView()
+//            }
         }
     }
 
