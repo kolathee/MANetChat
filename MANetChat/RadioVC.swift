@@ -15,11 +15,14 @@ class RadioVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var channelButton: UIButton!
     @IBOutlet weak var tapToSwitchLabel: UILabel!
+    @IBOutlet weak var noInternetConnection: UIView!
     
     private var url = "http://radiowink.wink.in.th"
     
     private var player:AVPlayer?
     private var isPlaying = false
+    
+    var reachability: Reachability?
     
     let channel = [ "FM 91",
                     "Wink Thailand",
@@ -33,7 +36,20 @@ class RadioVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            try reachability = Reachability()
+        } catch let error {
+            print(error)
+        }
         setPlayer(url: url)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (reachability?.isReachable)! {
+            noInternetConnection.isHidden = true
+        } else {
+            noInternetConnection.isHidden = false
+        }
     }
     func setPlayer(url:String){
         player = AVPlayer(url: NSURL(string: url)! as URL)

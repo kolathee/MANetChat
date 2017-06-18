@@ -4,8 +4,8 @@
 <dict>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-  <key>NSAllowsArbitraryLoads</key>
-  <true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
@@ -47,6 +47,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Location is required to show nearby Pokemon. If you don&apos;t want to catch them all, then keep your dang location to yourself.</string>
+	<string>Location is required.</string>
 </dict>
 </plist>

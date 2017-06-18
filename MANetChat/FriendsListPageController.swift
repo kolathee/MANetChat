@@ -7,16 +7,32 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
     
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     var FirstTimeViewAppear = true
-    
+    var reachability:Reachability?
+
+    @IBOutlet weak var friendRequestButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userDisplayName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            try reachability = Reachability()
+        } catch let error {
+            print(error)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if (reachability?.isReachable)! {
+            friendRequestButton.isEnabled = true
+            addButton.isEnabled = true
+        } else {
+            friendRequestButton.isEnabled = false
+            addButton.isEnabled = false
+        }
+        
         if FirstTimeViewAppear {
             setUpPage()
             FirstTimeViewAppear = false
@@ -24,7 +40,7 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
             imageView.clipsToBounds = true
         }
     }
-
+    
     func setUpPage(){
         //Set display name
         userDisplayName.text = appDelegate?.myName
@@ -47,5 +63,6 @@ class FriendsListPageController: UIViewController, UITableViewDelegate,UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 51
     }
+    
     
 }

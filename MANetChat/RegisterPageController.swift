@@ -16,11 +16,17 @@ class RegisterPageController: UIViewController {
     @IBOutlet weak var inputNameTextBox: UITextField!
     @IBOutlet weak var inputEmailTextBox: UITextField!
     @IBOutlet weak var inputPasswordTextBox: UITextField!
+    
+    var reachability : Reachability?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        do {
+            try reachability = Reachability()
+        } catch let error{
+            print(error)
+        }
+        
     }
 
     @IBAction func cencelButtonTapped(_ sender: Any) {
@@ -28,7 +34,15 @@ class RegisterPageController: UIViewController {
     }
     
     @IBAction func sendButtonTapped(_ sender: Any) {
-        guard let email = inputEmailTextBox.text,let password = inputPasswordTextBox.text else {
+        
+        let connectingInternet = reachability?.isReachable
+        
+        guard connectingInternet! else {
+            showMessage(title: "Try Again", message: "No Internet Connection")
+            return
+        }
+        
+        guard let email = inputEmailTextBox.text,let password = inputPasswordTextBox.text  else {
             
             //Alert when data is nil
             let optionMenu = UIAlertController(title: "Error", message: "Please insert information", preferredStyle: .actionSheet)
@@ -43,7 +57,7 @@ class RegisterPageController: UIViewController {
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
             
             if error != nil {
-                print("LOOOOOKKK 1! \(error!)")
+                self.showMessage(title: "Error", message: "Data's format is invalid")
             }
             
             guard let uid = user?.uid else {
@@ -67,6 +81,13 @@ class RegisterPageController: UIViewController {
                 self.dismissAllModalStackBackToInitialView()
             })
         })
+    }
+    
+    func showMessage(title:String , message:String) -> Void {
+        let messageWindows = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "done", style: .cancel, handler: nil)
+        messageWindows.addAction(action)
+        self.present(messageWindows, animated: true, completion: nil)
     }
     
     func dismissAllModalStackBackToInitialView() {

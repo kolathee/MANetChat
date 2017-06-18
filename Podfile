@@ -16,7 +16,8 @@ target 'MANetChat' do
     inherit! :search_paths
     # Pods for testing
   end
- 
+
+  pod 'RealmSwift'
   pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
@@ -24,4 +25,12 @@ target 'MANetChat' do
   pod 'JSQMessagesViewController'
   pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.1'
+    end
+  end
 end

@@ -11,8 +11,11 @@ import FirebaseDatabase
 import GeoFire
 
 class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    @IBOutlet weak var sendLocationButton: UIBarButtonItem!
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var noInternetConnectionView: UIView!
+    @IBOutlet weak var noticesButton: UIBarButtonItem!
     
     var victims = [PinAnnotation]()
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -28,6 +31,8 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var geoFireGreenNotiRef: FIRDatabaseReference!
     var geoFireVictimsRef: FIRDatabaseReference!
     
+    var reachability: Reachability?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,10 +47,24 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         geoFireGreenNoti = GeoFire(firebaseRef: geoFireGreenNotiRef)
         geoFireVictims = GeoFire(firebaseRef: geoFireVictimsRef)
         
+        do {
+            try reachability = Reachability()
+        } catch let error{
+            print(error)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        locationAuthStatus()
+        if (reachability?.isReachable)! {
+            noInternetConnectionView.isHidden = true
+            sendLocationButton.isEnabled = true
+            noticesButton.isEnabled = true
+            locationAuthStatus()
+        } else {
+            noInternetConnectionView.isHidden = false
+            sendLocationButton.isEnabled = false
+            noticesButton.isEnabled = false
+        }
     }
     
     func locationAuthStatus() {
@@ -83,8 +102,8 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         var annotationView: MKAnnotationView?
         
         if annotation.isKind(of: MKUserLocation.self) {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
-            annotationView?.image = UIImage(named: "ash")
+//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
+//            annotationView?.image = UIImage(named: "ash")
             
         } else if let deqAnno = mapView.dequeueReusableAnnotationView(withIdentifier: annoIdentifier) {
             annotationView = deqAnno
@@ -176,7 +195,6 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
                 print("Found Green Pin : \(key)")
             }
         })
-        
     }
     
     func saveVictimLocationToFirebase(forLocation location: CLLocation, withUsername name: String) {
@@ -185,8 +203,8 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     }
     
     @IBAction func sendLocationButtonWasTapped(_ sender: AnyObject) {
-        let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        saveVictimLocationToFirebase(forLocation: loc, withUsername: (appDelegate?.myName)!)
+        let loc = locationManager.location
+        saveVictimLocationToFirebase(forLocation: loc!, withUsername: (appDelegate?.myName)!)
     }
     
     func centerMapOnLocation(location: CLLocation) {

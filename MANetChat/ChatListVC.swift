@@ -22,6 +22,10 @@ class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate,MPC
         mpcManager?.connectionStatusDelegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.items?[1].badgeValue = nil
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appDelegate.onlineFriends.count
     }
@@ -30,6 +34,17 @@ class ChatListVC: UIViewController,UITableViewDataSource,UITableViewDelegate,MPC
         let cell = tableView.dequeueReusableCell(withIdentifier: "privateChatCell", for: indexPath) as! FriendViewCell
         cell.friendName.text = appDelegate.onlineFriends[indexPath.row].name
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPrivateChat" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! PrivateChatVC
+                let friend = appDelegate.onlineFriends[indexPath.row]
+                controller.chatingFriend = friend.name
+                controller.friendUID = friend.uid
+            }
+        }
     }
     
     func connectionDidChange() {

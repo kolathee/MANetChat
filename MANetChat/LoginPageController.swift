@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class LoginPageController: UIViewController,UITextFieldDelegate {
     
+    @IBOutlet weak var noInternetConnectionView: UIView!
     @IBOutlet weak var inputEmailTextBox: UITextField!
     @IBOutlet weak var inputPasswordTextBox: UITextField!
     
@@ -21,7 +22,6 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
     var coreDataManager : CoreDataManager!
     var friendsListComplete : Bool!
     var myInformationComplete : Bool!
-    var allowToGoMainView = false
     var reachability : Reachability?
     
     override func viewDidLoad() {
@@ -38,24 +38,7 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         if FIRAuth.auth()?.currentUser != nil {
-//            if (reachability?.isConnectedToNetwork)! {
-                allowToGoMainView = true
-                setUpData()
-//            } else {
-//                let user = coreDataManager.fetchData(enitityName: "MyInformation", at: "uid", value: (FIRAuth.auth()?.currentUser?.uid)!)
-//                self.appDelegate.myName = user[0].value(forKey: "name") as? String
-//                self.setUpMPCManager(with_name: self.appDelegate.myName!)
-//                let friends = coreDataManager.fetchAllData(enitityName: "Friend")
-//                for person in friends {
-//                    let user = User()
-//                    user.uid = person.value(forKey: "uid") as! String
-//                    user.email = person.value(forKey: "email") as! String
-//                    user.name = person.value(forKey: "name") as! String
-//                    user.date = person.value(forKey: "date") as! String
-//                    appDelegate.friends.append(user)
-//                }
-//                goToUserMainView()
-//            }
+            setUpData()
         }
     }
 
@@ -70,6 +53,10 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
     @IBAction func loginButtonTapped(_ sender: Any) {
         handleLogin()
     }
+
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        
+    }
     
     func handleLogin() {
         let email = inputEmailTextBox.text
@@ -77,14 +64,14 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
         
         guard email != "" , password != "" else {
             print("Form is not valid")
-            self.alertUser(title: "Form is not vaild", message: "Please try again")
+            self.showMessage(title: "Form is not vaild", message: "Please try again")
             return
         }
         
         FIRAuth.auth()?.signIn(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
                 print("Sign in error - code:\(String(describing: error))")
-                self.alertUser(title: "Error", message: "Please try again")
+                self.showMessage(title: "Error", message: "Please try again")
                 return
             } else {
                 self.appDelegate.currentUser = FIRAuth.auth()?.currentUser
@@ -104,6 +91,9 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
                 let name = user["name"] as! String
                 let email = user["email"] as! String
                 self.appDelegate.myName = name
+                self.appDelegate.myUID = uid
+                print("\n\nUIDDDDDDD \(self.appDelegate.myUID)\n")
+                self.appDelegate.myEmail = email
                 //Create MPCManager with User's name
                 self.setUpMPCManager(with_name: self.appDelegate.myName!)
                 if !(self.coreDataManager.addMyInformation(uid: uid, name: name, email: email)){
@@ -111,7 +101,7 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
                 }
                 
                 self.myInformationComplete = true
-                if self.myInformationComplete && self.friendsListComplete && self.allowToGoMainView {
+                if self.myInformationComplete && self.friendsListComplete {
                     self.goToUserMainView()
                 }
             }
@@ -144,7 +134,7 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
                     }
                     
                     self.friendsListComplete = true
-                    if self.myInformationComplete && self.friendsListComplete && self.allowToGoMainView {
+                    if self.myInformationComplete && self.friendsListComplete {
                         self.goToUserMainView()
                     }
                 }
@@ -179,7 +169,7 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
         }
     }
     
-    func alertUser(title:String , message:String) -> Void {
+    func showMessage(title:String , message:String) -> Void {
         let messageWindows = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "done", style: .cancel, handler: nil)
         messageWindows.addAction(action)
@@ -209,5 +199,4 @@ class LoginPageController: UIViewController,UITextFieldDelegate {
         }
         return true
     }
-
 }

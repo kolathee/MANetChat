@@ -41,6 +41,11 @@ PODS:
   - JSQMessagesViewController (7.3.4):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
 
 DEPENDENCIES:
   - Firebase
@@ -49,6 +54,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
   - JSQMessagesViewController
+  - RealmSwift
 
 EXTERNAL SOURCES:
   GeoFire:
@@ -73,7 +79,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
 
-PODFILE CHECKSUM: 3868b08a6072fd9abd3562c073791c9ee56bd1cc
+PODFILE CHECKSUM: 5e3314338ae7b456d686e67655a360c77dd28840
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

@@ -39,11 +39,9 @@ class TabBarController: UITabBarController {
     }
     
     func setUpData(){
-        
         //Get uid, email
         self.appDelegate.currentUser = FIRAuth.auth()?.currentUser
         self.appDelegate.myEmail = FIRAuth.auth()?.currentUser?.email
         self.appDelegate.myUID = FIRAuth.auth()?.currentUser?.uid
-        
-        }
+    }
 }

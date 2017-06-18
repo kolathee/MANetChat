@@ -14,6 +14,7 @@
 		A40F63CA1E10CB9000615246 /* RadioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F63C91E10CB9000615246 /* RadioVC.swift */; };
 		A40F63CC1E10D20400615246 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40F63CB1E10D20400615246 /* MediaPlayer.framework */; };
 		A414C2721E11DED3006B2BB1 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414C2711E11DED3006B2BB1 /* ChatListVC.swift */; };
+		A4186F581ECDF61700EA8EF1 /* RealmMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4186F571ECDF61700EA8EF1 /* RealmMessage.swift */; };
 		A428D98D1E0BD6C000A8ADCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */; };
 		A428D9951E0BD6C000A8ADCC /* MANetChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A428D9931E0BD6C000A8ADCC /* MANetChat.xcdatamodeld */; };
 		A428D99A1E0BD6C000A8ADCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A428D9981E0BD6C000A8ADCC /* LaunchScreen.storyboard */; };
@@ -30,13 +31,18 @@
 		A457CAB71E0ECE1200C2674A /* RequestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CAB61E0ECE1200C2674A /* RequestsCell.swift */; };
 		A457CABF1E0F154F00C2674A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A457CABE1E0F154F00C2674A /* User.swift */; };
 		A468EAD01EA13A3E007A8391 /* FriendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A468EACF1EA13A3E007A8391 /* FriendViewCell.swift */; };
+		A47331A91ED9BCD600DA3C00 /* NoticesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47331A81ED9BCD600DA3C00 /* NoticesVC.swift */; };
+		A47331AB1ED9BFD600DA3C00 /* NoticesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47331AA1ED9BFD600DA3C00 /* NoticesDetailVC.swift */; };
+		A47331AD1ED9C2BE00DA3C00 /* NoticeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47331AC1ED9C2BE00DA3C00 /* NoticeViewCell.swift */; };
 		A48DBCE11EB0F54D006F8D1D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48DBCE01EB0F54D006F8D1D /* CoreDataManager.swift */; };
 		A48DBCE31EB1071F006F8D1D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48DBCE21EB1071F006F8D1D /* Reachability.swift */; };
 		A498F8191E1610B300F2C293 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A498F8181E1610B300F2C293 /* PinAnnotation.swift */; };
 		A4A0A7941E0DCA9200BF6D4C /* SearchFriendPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */; };
+		A4A9CE4B1ECDB0BE00C60D30 /* UnseenFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9CE4A1ECDB0BE00C60D30 /* UnseenFlag.swift */; };
 		A4B7C61E1EAA65570000E4DC /* PrivateChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B7C61D1EAA65570000E4DC /* PrivateChatVC.swift */; };
 		A4C1A6631E43AAA300BE6EDE /* PublicChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */; };
 		A4C754FC1E76709B00548F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C754FB1E76709B00548F67 /* Main.storyboard */; };
+		A4D855BB1EDD8C4700B5DA1F /* POP6.WAV in Resources */ = {isa = PBXBuildFile; fileRef = A4D855BA1EDD8C4700B5DA1F /* POP6.WAV */; };
 		D392B5A333A687031E43FA73 /* Pods_MANetChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37A071509EC26E9E31B86B9 /* Pods_MANetChat.framework */; };
 		D4223141A41EAB46D6FFD7BF /* Pods_MANetChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D659CAC58E8B9655E810E6A /* Pods_MANetChatTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +78,7 @@
 		A40F63C91E10CB9000615246 /* RadioVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioVC.swift; sourceTree = "<group>"; };
 		A40F63CB1E10D20400615246 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A414C2711E11DED3006B2BB1 /* ChatListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
+		A4186F571ECDF61700EA8EF1 /* RealmMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMessage.swift; sourceTree = "<group>"; };
 		A428D9891E0BD6C000A8ADCC /* MANetChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANetChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A428D98C1E0BD6C000A8ADCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A428D9941E0BD6C000A8ADCC /* MANetChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MANetChat.xcdatamodel; sourceTree = "<group>"; };
@@ -94,13 +101,18 @@
 		A457CAB61E0ECE1200C2674A /* RequestsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsCell.swift; sourceTree = "<group>"; };
 		A457CABE1E0F154F00C2674A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A468EACF1EA13A3E007A8391 /* FriendViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewCell.swift; sourceTree = "<group>"; };
+		A47331A81ED9BCD600DA3C00 /* NoticesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticesVC.swift; sourceTree = "<group>"; };
+		A47331AA1ED9BFD600DA3C00 /* NoticesDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticesDetailVC.swift; sourceTree = "<group>"; };
+		A47331AC1ED9C2BE00DA3C00 /* NoticeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeViewCell.swift; sourceTree = "<group>"; };
 		A48DBCE01EB0F54D006F8D1D /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A48DBCE21EB1071F006F8D1D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		A498F8181E1610B300F2C293 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		A4A0A7931E0DCA9200BF6D4C /* SearchFriendPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFriendPageController.swift; sourceTree = "<group>"; };
+		A4A9CE4A1ECDB0BE00C60D30 /* UnseenFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnseenFlag.swift; sourceTree = "<group>"; };
 		A4B7C61D1EAA65570000E4DC /* PrivateChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateChatVC.swift; sourceTree = "<group>"; };
 		A4C1A6621E43AAA300BE6EDE /* PublicChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicChatVC.swift; sourceTree = "<group>"; };
 		A4C754FB1E76709B00548F67 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A4D855BA1EDD8C4700B5DA1F /* POP6.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = POP6.WAV; sourceTree = "<group>"; };
 		B37A071509EC26E9E31B86B9 /* Pods_MANetChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANetChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FD77EF47989147A011FE91 /* Pods-MANetChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatTests/Pods-MANetChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED1861A98E67297DA6C20736 /* Pods-MANetChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANetChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MANetChatUITests/Pods-MANetChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				A457CAB61E0ECE1200C2674A /* RequestsCell.swift */,
+				A47331AC1ED9C2BE00DA3C00 /* NoticeViewCell.swift */,
 				A468EACF1EA13A3E007A8391 /* FriendViewCell.swift */,
 			);
 			name = Cells;
@@ -182,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				A498F8181E1610B300F2C293 /* PinAnnotation.swift */,
+				A4186F571ECDF61700EA8EF1 /* RealmMessage.swift */,
+				A4A9CE4A1ECDB0BE00C60D30 /* UnseenFlag.swift */,
 				A457CABE1E0F154F00C2674A /* User.swift */,
 			);
 			name = Models;
@@ -190,6 +205,7 @@
 		A428D9801E0BD6C000A8ADCC = {
 			isa = PBXGroup;
 			children = (
+				A4D855BA1EDD8C4700B5DA1F /* POP6.WAV */,
 				A428D98B1E0BD6C000A8ADCC /* MANetChat */,
 				A428D9A31E0BD6C000A8ADCC /* MANetChatTests */,
 				A428D9AE1E0BD6C000A8ADCC /* MANetChatUITests */,
@@ -251,7 +267,9 @@
 				A428D9C11E0C2D3100A8ADCC /* TabBarController.swift */,
 				A457CAB41E0EB3EB00C2674A /* FriendsListPageController.swift */,
 				A428D9C31E0C3E7000A8ADCC /* LoginPageController.swift */,
+				A47331AA1ED9BFD600DA3C00 /* NoticesDetailVC.swift */,
 				A457CAB21E0E445300C2674A /* FriendRequestsPageController.swift */,
+				A47331A81ED9BCD600DA3C00 /* NoticesVC.swift */,
 				A40F63C91E10CB9000615246 /* RadioVC.swift */,
 				A414C2711E11DED3006B2BB1 /* ChatListVC.swift */,
 				A4B7C61D1EAA65570000E4DC /* PrivateChatVC.swift */,
@@ -327,6 +345,7 @@
 				A428D9A81E0BD6C000A8ADCC /* Frameworks */,
 				A428D9A91E0BD6C000A8ADCC /* Resources */,
 				D6BB2DDD325A043D92EB0C07 /* [CP] Copy Pods Resources */,
+				9CDC6F6EB0C20096C3DF53E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -396,6 +415,7 @@
 				A428D99A1E0BD6C000A8ADCC /* LaunchScreen.storyboard in Resources */,
 				A428D9C81E0C8FCF00A8ADCC /* GoogleService-Info.plist in Resources */,
 				A44102411E1A6D620094FF18 /* Assets.xcassets in Resources */,
+				A4D855BB1EDD8C4700B5DA1F /* POP6.WAV in Resources */,
 				A4C754FC1E76709B00548F67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,7 +449,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		93F05BB29D54DE1FC13288C7 /* [CP] Copy Pods Resources */ = {
@@ -459,7 +479,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CDC6F6EB0C20096C3DF53E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MANetChatUITests/Pods-MANetChatUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B10C39CB611F7F0698A768B1 /* [CP] Embed Pods Frameworks */ = {
@@ -534,7 +569,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -544,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47331AD1ED9C2BE00DA3C00 /* NoticeViewCell.swift in Sources */,
 				A40F63CA1E10CB9000615246 /* RadioVC.swift in Sources */,
 				A428D9C41E0C3E7000A8ADCC /* LoginPageController.swift in Sources */,
 				A428D9C61E0C3EB100A8ADCC /* RegisterPageController.swift in Sources */,
@@ -560,10 +596,14 @@
 				A428D9C21E0C2D3100A8ADCC /* TabBarController.swift in Sources */,
 				A457CABF1E0F154F00C2674A /* User.swift in Sources */,
 				A48DBCE31EB1071F006F8D1D /* Reachability.swift in Sources */,
+				A47331A91ED9BCD600DA3C00 /* NoticesVC.swift in Sources */,
 				A457CAB31E0E445300C2674A /* FriendRequestsPageController.swift in Sources */,
 				A40E56221E475F6F0015D96E /* MPCManager.swift in Sources */,
+				A4A9CE4B1ECDB0BE00C60D30 /* UnseenFlag.swift in Sources */,
+				A4186F581ECDF61700EA8EF1 /* RealmMessage.swift in Sources */,
 				A4C1A6631E43AAA300BE6EDE /* PublicChatVC.swift in Sources */,
 				A4B7C61E1EAA65570000E4DC /* PrivateChatVC.swift in Sources */,
+				A47331AB1ED9BFD600DA3C00 /* NoticesDetailVC.swift in Sources */,
 				A498F8191E1610B300F2C293 /* PinAnnotation.swift in Sources */,
 				A457CAB71E0ECE1200C2674A /* RequestsCell.swift in Sources */,
 			);

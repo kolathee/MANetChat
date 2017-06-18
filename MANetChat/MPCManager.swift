@@ -1,8 +1,8 @@
 import Foundation
+import RealmSwift
 import MultipeerConnectivity
 
 protocol MPCManagerPublicDelegate {
-    
     func foundPeer()
     func lostPeer()
     func invitationWasReceived(fromPeer : String)
@@ -15,15 +15,22 @@ protocol MPCManagerPrivateDelegate {
     func receivePrivateData(message:String, fromPeer:MCPeerID)
 }
 
+protocol MPCAlertPrivateMessageDelegate {
+    func receivePrivateMessage(message:String,sender:String)
+}
+
 protocol MPCManagerConnectionStatus {
     func connectionDidChange()
 }
 
 class MPCManager: NSObject {
     
-    var PublicDelegate: MPCManagerPublicDelegate?
-    var privateMessageDelegate: MPCManagerPrivateDelegate?
-    var connectionStatusDelegate: MPCManagerConnectionStatus?
+    let realm = try! Realm()
+    
+    var publicDelegate:             MPCManagerPublicDelegate?
+    var privateMessageDelegate:     MPCManagerPrivateDelegate?
+    var alertPrivateMessageDelegate:MPCAlertPrivateMessageDelegate?
+    var connectionStatusDelegate:   MPCManagerConnectionStatus?
     
     var session : MCSession!
     var peer : MCPeerID!
@@ -35,16 +42,19 @@ class MPCManager: NSObject {
     var invitationHandler : ((Bool,MCSession)->Void)!
     
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var myUID : String?
+    var myName : String?
     
     //====== Inintialize =================================================
     
     override init(){
         super.init()
-        
     }
     
     init(userName:String){
         super.init()
+        myUID = appDelegate.myUID
+        myName = appDelegate.myName
         setupManager(userName: userName)
     }
     
@@ -68,12 +78,11 @@ class MPCManager: NSObject {
 
     //====== Send data to specific peer =======
     
-    func sendPrivateData(TextMessage text:String, toPeer targetPeer:MCPeerID) -> Bool {
-        let dataToSend = NSKeyedArchiver.archivedData(withRootObject: "PRIVATEMESSAGE191" + text)
-        let peersArray = NSArray(object: targetPeer)
+    func sendPrivateData(TextMessage text:String, toUID uid:String) -> Bool {
+        let dataToSend = NSKeyedArchiver.archivedData(withRootObject: "PrivateFor191\(uid)\(text)")
         
         do {
-            try session.send(dataToSend, toPeers: peersArray as! [MCPeerID], with:.reliable)
+            try session.send(dataToSend, toPeers: session.connectedPeers, with:.reliable)
             return true
         } catch {
             return false
@@ -110,7 +119,7 @@ extension MPCManager : MCSessionDelegate{
             
         case MCSessionState.connected:
             print("\n\(peerID.displayName) connect to session: \(session)")
-            PublicDelegate?.connectedWithPeer(peerName : peerID.displayName)
+            publicDelegate?.connectedWithPeer(peerName : peerID.displayName)
             connectedPeers.append(peerID)
             
         case MCSessionState.connecting:
@@ -138,12 +147,27 @@ extension MPCManager : MCSessionDelegate{
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         print("didReceiveData: \(data)")
-        let message = NSKeyedUnarchiver.unarchiveObject(with: data)! as! String
-        if message.contains("PRIVATEMESSAGE191") {
-            _ = message.replacingOccurrences(of: "PRIVATEMESSAGE191", with: "")
-            privateMessageDelegate?.receivePrivateData(message: message, fromPeer: peerID)
+        var message = NSKeyedUnarchiver.unarchiveObject(with: data)! as! String
+        if message.contains("PrivateFor191") {
+            if message.contains(myUID!){
+                message = message.replacingOccurrences(of: myUID!, with: "")
+                message = message.replacingOccurrences(of: "PrivateFor191", with: "")
+                
+                let realmMessage = RealmMessage()
+                realmMessage.message = message
+                realmMessage.sender = peerID.displayName
+                realmMessage.receiver = myName
+                realmMessage.timestamp = NSDate(timeIntervalSinceNow: 1)
+                
+                DispatchQueue.main.async {
+                    try! self.realm.write {
+                        self.realm.add(realmMessage)
+                    }
+                }
+                alertPrivateMessageDelegate?.receivePrivateMessage(message: message, sender: peerID.displayName)
+            }
         } else {
-            PublicDelegate?.receivedData(message:message, fromPeer: peerID)
+            publicDelegate?.receivedData(message:message, fromPeer: peerID)
         }
     }
     
@@ -186,7 +210,7 @@ extension MPCManager : MCNearbyServiceBrowserDelegate {
 //        print(foundPeers)
 //        print("--------------------------")
         invatePeer(peerID: peerID, to: self.session, timeout: 10)
-        PublicDelegate?.foundPeer()
+        publicDelegate?.foundPeer()
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
@@ -199,7 +223,7 @@ extension MPCManager : MCNearbyServiceBrowserDelegate {
 //        print("-----------------------------\nLost : " + peerID.displayName)
 //        print(foundPeers)
 //        print("--------------------------")
-        PublicDelegate?.lostPeer()
+        publicDelegate?.lostPeer()
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {

@@ -5,19 +5,16 @@ class PublicChatVC: JSQMessagesViewController {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var mpcManager:MPCManager?
-    
-    //All messages
     var messages = [JSQMessage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // tell JSQMessagesViewController
         // who is the current user
-        
         self.senderId = appDelegate.myUID
         self.senderDisplayName = appDelegate.myName
         self.mpcManager = appDelegate.mpcManager
-        mpcManager?.PublicDelegate = self
+        mpcManager?.publicDelegate = self
         
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
@@ -80,12 +77,11 @@ extension PublicChatVC {
         let message = messages[indexPath.row]
         
         if senderId == message.senderId {
-            return bubbleFactory?.outgoingMessagesBubbleImage(with: .green)
+            return bubbleFactory?.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleRed())
         } else {
-            return bubbleFactory?.incomingMessagesBubbleImage(with: .lightGray)
+            return bubbleFactory?.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
         }
     }
-    
 }
 
 extension PublicChatVC: MPCManagerPublicDelegate {
